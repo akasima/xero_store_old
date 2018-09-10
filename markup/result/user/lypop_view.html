@@ -1,0 +1,1119 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+    
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+    
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  <section class="header">
+  <!-- [D] width를 제어하기 위해 사용하는 클래스입니다. 100% 넓이를 사용하는 위젯은 사용할 필요가 없습니다. -->
+  <div class="container">
+    <h2 class="xe-sr-only">상단 유틸</h2>
+    <article class="xe-shop-notice xe-hidden-xs xe-hidden-sm">
+      <h3>notice</h3>
+      <div class="notice-view">
+        <ul>
+          <li><a href="#">1.테스트 베이스 입니다 테스트 베이스 입니다 </a></li>
+          <li><a href="#">2.공지사항입니다.></a></li>
+          <li><a href="#">3.테스트 베이스 입니다 테스트 베이스 입니다 테스트 베이스 입니다 </a></li>
+          <li><a href="#">4.테스트 베이스 입니다 테스트 베이스 입니다 테스트 베이스 입니다 </a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="xe-shop-utilmenu xe-hidden-xs xe-hidden-sm">
+      <h2 class="xe-sr-only">관련 링크</h2>
+      <ul class="xe-shop-utilmenu-list">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">장바구니</a></li>
+        <li><a href="#">주문조회</a></li>
+        <li><a href="#">마이페이지</a></li>
+      </ul>
+      <h2 class="xe-sr-only">검색</h2>
+      <div class="xe-shop-search-input">
+        <input type="text" class="xe-form-control" placeholder="">
+        <button type="button"><i class="xi-search"></i><span class="xe-sr-only">검색</span></button>
+      </div>
+    </article>
+  </div>
+</section>
+  <section class="logo">
+  <div class="container">
+    <h2 class="xe-shop-logo">
+      <a href="#"><img src="../../../assets/img/shop-logo@lg.png" alt="쇼핑몰 로고"></a>
+    </h2>
+    <button type="button" class="xe-shop-btn-search xe-hidden-md xe-hidden-lg"><i class="xi-search"></i><span class="xe-sr-only">검색</span></button>
+  </div>
+</section>
+  <section class="menu">
+  <div class="container">
+    <h2 class="xe-sr-only">메뉴</h2>
+    <ul class="xe-shop-menu">
+      <li><a href="#">CATEGORY 1</a>
+        <ul>
+          <li><a href="#">1 depth depth depth depth depth depth depth depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 2</a>
+        <ul>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 3</a>
+        <ul>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 4</a>
+        <ul>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 5</a>
+        <ul>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 6</a>
+        <ul>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 7</a>
+        <ul>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 8</a>
+        <ul>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 9</a>
+        <ul>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h2 class="xe-sr-only">카테고리</h2>
+    <button type="button" class="xe-btn-category"><i class="xi-bars"></i><span class="xe-sr-only">전체 카테고리 열기</span></button>
+    <!-- [D] 활성화 시 active 클래스 추가 부탁드립니다-->
+    <div class="xe-shop-category ">
+      <div class="xe-shop-login-box xe-hidden-lg xe-hidden-md">
+        <button class="xe-btn xe-btn-login">로그인</button>
+        <button class="xe-btn-close"><span class="xe-sr-only">전체 메뉴 닫기</span><i class="xi-close-thin"></i></button>
+      </div>
+      <div class="xe-shop-btn-box xe-hidden-lg xe-hidden-md">
+        <div>
+          <a href="#">장바구니</a>
+          <a href="#">주문조회</a>
+        </div>
+        <div>
+          <a href="#">마이페이지</a>
+          <a href="#">공지사항</a>
+        </div>
+      </div>
+      <h3 class="xe-shop-category-caption xe-hidden-md xe-hidden-lg">CATEGORY</h3>
+      <div class="xe-shop-category-wrap">
+        <ul class="xe-shop-category-list">
+        <!-- [D] 열림시 open 클래스 추가 -->
+        <li class="open">
+          <h4 class="xe-shop-category-title"><a href="#">category 1</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 2category 2category 2category 2category 2category 2category 2category 2category 2category 2category 2category 2</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 3</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 4</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 5</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 6</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 7</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 8</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 9</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+      </ul>
+        
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="search">
+  <div class="container">
+    <h2 class="xe-sr-only">검색</h2>
+    <!-- [D] 활성화 시 active 클래스 추가 부탁드립니다-->
+    <div class="xe-shop-search">
+        <div class="search-box">
+          <div class="search-box-border">
+            <input type="search" class="search-box-input">
+            <button class="btn-search"><span class="xe-sr-only">검색하기</span><i class="xi-search"></i></button>
+          </div>
+        </div><!-- //search-box  -->
+        <div class="list-box">
+          <div class="search-keyword">
+            <div class="search-keyword-btn">
+              <!--[D] 활성화시 active 클래스 추가 부탁드립니다.  -->
+              <button type="button" class="active">최근 검색어</button>
+              <button type="button">인기 검색어</button>
+            </div>
+            <div class="search-keyword-list">
+              <!-- [D] 최근 검색어 리스트 display: none/block 하셔도 됩니다  -->
+              <ul>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+              </ul>
+            </div>
+            <div class="search-close">
+              <button class="xi-user-plus"></button>
+              <button type="button" class="btn-search-close">닫기</button>
+            </div>
+          </div>
+          <div class="search-preview">
+            <div class="search-preview-list">
+              <ul>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+            </ul>
+              
+            </div>
+            <div class="search-close">
+              <button type="button" class="btn-search-close">닫기</button>
+            </div>
+          </div>
+        </div><!-- //list-box  -->
+    </div><!-- //xe-shop-search  -->
+  </div>
+</section>
+  
+  <!-- 레이어팝업 모음 -->
+  <div style="margin: 100px 0"></div>
+
+
+<!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+<div class="lypop-type lypop-option">
+  <div class="lypop-header">
+    <h1 class="lypop-header-title">옵션 변경/추가</h1>
+  </div><!-- //lypop-header -->
+  <div class="lypop-contents">
+    <h3 class="xe-sr-only">목차</h3>
+    <div class="option-table">
+      <div class="option-table-header xe-hidden-sm xe-hidden-xs">
+        <ul>
+          <li>상품정보</li>
+          <li>상품금액</li>
+        </ul>
+      </div>
+      <div class="option-table-body">
+        <div class="option-table-body-product">
+          <div class="product-option">
+            <div class="product-option-img">
+              <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+            </div>
+            <div class="product-option-name">
+              상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+            </div>
+          </div><!-- //product -->
+          <div class="product-price">
+            <span class="product-price-title xe-hidden-lg xe-hidden-md">상품금액</span>
+            <span class="product-price-number">111,111,111원</span>
+          </div><!-- //product-price -->
+        </div> <!-- //option-table-body-product -->
+      </div><!-- //option-table-body -->
+    </div> <!-- //option-table -->
+    
+    <div class="product-info-select">
+      <div class="xe-select-box xe-btn">
+        <label>컬러 선택</label>
+        <select>
+          <option disabled="">Master</option>
+          <option selected="selected">1</option>
+          <option>2</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="product-info-select">
+      <div class="xe-select-box xe-btn">
+        <label>사이즈 선택</label>
+        <select>
+          <option disabled="">Master</option>
+          <option selected="selected">1</option>
+          <option>2</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="product-info-counter">
+      <div class="product-info-cell">
+        <div class="product-info-counter-title">블루 / M 블루 / M 블루 / M 블루 / 블루 / M 블루 / M 블루 / M 블루 / 블루 / M 블루 / M 블루 / M 블루 / 블루 / M 블루 / M 블루 / M 블루 / </div>
+        <div class="xe-spin-box">
+          <button type="button"><i class="xi-minus-thin"></i><span class="xe-sr-only">감소</span></button>
+          <p>1</p>
+          <button type="button"><i class="xi-plus-thin"></i><span class="xe-sr-only">증가</span></button>
+        </div>
+        <p class="product-info-counter-sum">000,110,500원</p>
+        <button class="xe-btn xe-btn-remove"><i class="xi-close-thin"></i><span class="xe-sr-only">이 옵션 삭제</span></button>
+      </div> <!-- //product-info-cell -->
+      
+      <div class="product-info-low xe-border-top xe-border-bottom counter" style="display: none">
+        <div class="product-info-cell">레드 / XXL</div>
+        <div class="product-info-cell">
+          <div class="xe-spin-box">
+            <button type="button"><i class="xi-minus-thin"></i><span class="xe-sr-only">감소</span></button>
+            <p>1</p>
+            <button type="button"><i class="xi-plus-thin"></i><span class="xe-sr-only">증가</span></button>
+          </div>
+          <p>110,500원</p>
+          <button class="xe-btn xe-btn-remove"><i class="xi-close-thin"></i><span class="xe-sr-only">이 옵션 삭제</span></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lypop-option-sum">
+      <h2 class="lypop-option-sum-title">상품 금액</h2>
+      <div class="lypop-option-sum-number">000,000,000 <span class="text">원</span></div>
+    </div><!-- //option-sum -->
+    
+  </div><!-- //lypop-contents -->
+  <div class="lypop-btn">
+    <button type="button" class="lypop-btn-black">옵션변경</button>
+    <button type="button" class="lypop-btn-white">취소</button>
+  </div><!-- //lypop_btn -->
+</div><!-- //lypop_tyep option -->
+
+
+<div style="margin: 100px 0"></div>
+
+
+
+<!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+<div class="lypop-type2 lypop-terms">
+  <div class="lypop-header">
+    <h1 class="lypop-header-title">전자금융거래 이용약관</h1>
+    <button class="lypop-header-close"><span class="xe-sr-only">해당 팝업 닫기</span><i class="xi-close-thin"></i></button>
+  </div><!-- //lypop-header -->
+  <div class="lypop-contents">
+    <div class="lypop-text-wrap">
+      <div class="lypop-text-body">
+        <p class="lypop-text-title">제1조 (목적)</p>
+        <p>이 약관은 주식회사 신세계페이먼츠(이하 '회사'라 합니다)가 제공하는 전자지급결제대행서비스를 이용자가 이용함에 있어 회사와 이용자 사이의 전자금융거래에 관한 기본적인 사항을 정함을 목적으로 합니다.</p>
+        <p class="lypop-text-title">제2조 (용어의 정의)</p>
+        <p>이 약관에서 정하는 용어의 정의는 다음과 같습니다.</p>
+        <p>1. '전자금융거래'라 함은 회사가 전자적 장치를 통하여 전자지급결제대행서비스 (이하 '전자금융거래 서비스'라고 합니다)를 제공하고, 이용자가 회사의 종사자와 직접 대면하거나 의사소통을 하지아니하고 자동화된 방식으로 이를 이용하는 거래를 말합니다.</p>
+        <p>2. '전자지급결제대행서비스'라 함은 전자적 방법으로 재화의 구입 또는 용역의 이용에 있어서 지급결제정보를 송신하거나 수신하는 것 또는 그 대가의 정산을 대행하거나 매개하는 서비스를 말합니다.</p>
+        <p>3. '이용자'라 함은 이 약관에 동의하고 회사가 제공하는 전자금융거래 서비스를 이용하는 자를 말합니다.</p>
+        <p>4. '접근매체'라 함은 전자금융거래에 있어서 거래지시를 하거나 이용자 및 거래내용의 진실성과 정확성을 확보하기 위하여 사용되는 수단 또는 정보로서 전자식 카드 및 이에 준하는 전자적 정보(신용카드번호를 포함한다), '전자서명법'상의 인증서, 금융기관 또는 전자금융업자에 등록된 이용자번호, 이용자의 생체정보, 이상의 수단이나 정보를 사용하는데 필요한 비밀번호 등 전자금융거래법 제2조 제10호에서 정하고 있는 것을 말합니다.</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+      </div><!-- //terms-text -->
+    </div><!-- //terms-wrap -->
+  </div><!-- //lypop-contents -->
+</div><!-- //lypop_tyep cart -->
+
+
+<div style="margin: 100px 0"></div>
+
+  
+  <!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+  <div class="lypop-type lypop-shipping">
+    <div class="lypop-header">
+      <h1 class="lypop-header-title">배송조회</h1>
+    </div><!-- //lypop-header -->
+    <div class="lypop-contents">
+      <h3 class="xe-sr-only">배송 조회 내용</h3>
+      <div class="table-wrap">
+        <h2 class="lypop-table-title">주문정보</h2>
+        <div class="table-type4">
+          
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문일자</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문번호</h3></div>
+            <div class="table-cell">2017000000000000</div>
+          </div><!-- //table-row -->
+          
+          <div class="table-row">
+            <div class="table-cell header"><h3>상품정보</h3></div>
+            <div class="table-cell">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product product0 product0 product0 product0 product0 product0 product0 product0</div>
+          </div><!-- //table-row -->
+          
+          <div class="table-row">
+            <div class="table-cell header"><h3>택배사</h3></div>
+            <div class="table-cell"><a href="#" class="lypop-shipper">XX택배</a></div>
+          </div><!-- //table-row -->
+          
+          <div class="table-row">
+            <div class="table-cell header"><h3>송장번호</h3></div>
+            <div class="table-cell">000000000000000000</div>
+          </div><!-- //table-row -->
+          
+        </div><!-- //table-type4 -->
+        
+        
+        <h2 class="lypop-table-title">배송현황</h2>
+        <div class="table-type5">
+
+          <div class="table-header">
+            <div class="table-row">
+              <div class="table-cell">처리일시</div>
+              <div class="table-cell">처리장소</div>
+              <div class="table-cell">전화번호</div>
+              <div class="table-cell xe-hidden-xs">담당자</div>
+              <div class="table-cell">상태</div>
+            </div><!-- //table-row -->
+          </div><!-- //table-header -->
+          
+          <div class="table-body">
+            <div class="table-row">
+              <div class="table-cell">2017.00.00</div>
+              <div class="table-cell">처리점처리점처리점처리점처리점처리점</div>
+              <div class="table-cell">0000-0000-00000000</div>
+              <div class="table-cell xe-hidden-xs">담당자담당자담당자담당자</div>
+              <div class="table-cell">배달완료배달완료</div>
+            </div><!-- //table-row -->
+            
+            <div class="table-row">
+              <div class="table-cell">2017.00.00</div>
+              <div class="table-cell">처리점처리점</div>
+              <div class="table-cell">0000-0000-0000</div>
+              <div class="table-cell xe-hidden-xs">담당자담당자</div>
+              <div class="table-cell">배달완료</div>
+            </div><!-- //table-row -->
+            
+            <div class="table-row">
+              <div class="table-cell">2017.00.00</div>
+              <div class="table-cell">처리점처리점</div>
+              <div class="table-cell">0000-0000-0000</div>
+              <div class="table-cell xe-hidden-xs">담당자담당자</div>
+              <div class="table-cell">배송중 (입고)</div>
+            </div><!-- //table-row -->
+            
+          </div><!-- //table-body -->
+        </div><!-- //table-type4 -->
+      </div><!-- //table-wrap -->
+    </div><!-- //lypop-contents -->
+    <div class="lypop-btn">
+      <button type="button" class="lypop-btn-white">닫기</button>
+    </div><!-- //lypop_btn -->
+  </div><!-- //lypop_tyep option -->
+  
+
+
+
+<div style="margin: 100px 0"></div>
+
+
+  
+  <!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+  <div class="lypop-type lypop-cancle">
+    <div class="lypop-header">
+      <h1 class="lypop-header-title">취소상세정보</h1>
+    </div><!-- //lypop-header -->
+    <div class="lypop-contents">
+      <h3 class="xe-sr-only">취소 정보, 사유, 환불 정보</h3>
+      <div class="table-wrap">
+        <h2 class="lypop-table-title">취소정보</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문일자</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문번호</h3></div>
+            <div class="table-cell">2017000000000000</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>상품정보</h3></div>
+            <div class="table-cell">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product product0 product0 product0 product0 product0 product0 product0 product0</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>진행상태</h3></div>
+            <div class="table-cell">취소환불완료</div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+        <h2 class="lypop-table-title">취소사유</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>취소요청사유</h3></div>
+            <div class="table-cell">기타</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>상세사유</h3></div>
+            <div class="table-cell">취소사유취소사유취소사유취소사유취소사유취소사유취소사유취소사유취소사유취소사유취소사유</div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+        <h2 class="lypop-table-title">환불 정보</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>환불 완료일</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>결제수단</h3></div>
+            <div class="table-cell"><span>무통장 입금 </span> <br class="xe-hidden-lg xe-hidden-md"><span>(국민은행 000000-00-000000)</span></div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>결제금액</h3></div>
+            <div class="table-cell"><p class="lypop-price-right">10,000원</p></div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>환불금액</h3></div>
+            <div class="table-cell"><b class="lypop-price-right">10,000원</b></div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+      </div><!-- //table-wrap -->
+    </div><!-- //lypop-contents -->
+    <div class="lypop-btn">
+      <button type="button" class="lypop-btn-black">확인</button>
+      <button type="button" class="lypop-btn-white">닫기</button>
+    </div><!-- //lypop_btn -->
+  </div><!-- //lypop_tyep option -->
+  
+
+
+<div style="margin: 100px 0"></div>
+
+
+  
+  <!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+  <div class="lypop-type lypop-return">
+    <div class="lypop-header">
+      <h1 class="lypop-header-title">반품상세정보</h1>
+    </div><!-- //lypop-header -->
+    <div class="lypop-contents">
+      <h3 class="xe-sr-only">반품 정보, 사유, 수거정보, 환불 정보</h3>
+      <div class="table-wrap">
+        <h2 class="lypop-table-title">반품정보</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문일자</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문번호</h3></div>
+            <div class="table-cell">2017000000000000</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>상품정보</h3></div>
+            <div class="table-cell">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product product0 product0 product0 product0 product0 product0 product0 product0</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>진행상태</h3></div>
+            <div class="table-cell">반품환불완료</div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+        <h2 class="lypop-table-title">반품사유</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>반품요청사유</h3></div>
+            <div class="table-cell">상품파손</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>상세사유</h3></div>
+            <div class="table-cell">파손된 상품이 배송되었습니다. 파손된 상품이 배송되었습니다. 파손된 상품이 배송되었습니다.</div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+        <h2 class="lypop-table-title">반품 수거정보</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>수거방법</h3></div>
+            <div class="table-cell"><b>택배 예약</b></div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>수거 신청일</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>수거상태</h3></div>
+            <div class="table-cell">수거완료</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>택배사/송장번호</h3></div>
+            <div class="table-cell"><a href="#" class="lypop-shipper">XX택배 000000000000000000</a></div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+        <h2 class="lypop-table-title">환불 정보</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>환불 완료일</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>결제수단</h3></div>
+            <div class="table-cell"><span>무통장 입금 </span> <br class="xe-hidden-lg xe-hidden-md"><span>(국민은행 000000-00-000000)</span></div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>결제금액</h3></div>
+            <div class="table-cell"><p class="lypop-price-right">10,000원</p></div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>환불금액</h3></div>
+            <div class="table-cell"><b class="lypop-price-right">10,000원</b></div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+      </div><!-- //table-wrap -->
+    </div><!-- //lypop-contents -->
+    <div class="lypop-btn">
+      <button type="button" class="lypop-btn-black">확인</button>
+      <button type="button" class="lypop-btn-white">닫기</button>
+    </div><!-- //lypop_btn -->
+  </div><!-- //lypop_tyep option -->
+  
+
+
+<div style="margin: 100px 0"></div>
+
+
+  
+  <!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+  <div class="lypop-type lypop-reivew">
+    <div class="lypop-header">
+      <h1 class="lypop-header-title">상품리뷰</h1>
+    </div><!-- //lypop-header -->
+    <div class="lypop-contents">
+      <div class="table-wrap">
+        <h2 class="lypop-table-title">주문정보</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문일자</h3></div>
+            <div class="table-cell">2017.00.00.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>주문번호</h3></div>
+            <div class="table-cell">2017000000000000</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>상품정보</h3></div>
+            <div class="table-cell">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product product0 product0 product0 product0 product0 product0 product0 product0</div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        
+        <div class="evaluation">
+          <h2 class="lypop-table-title">상품평가</h2>
+          <div class="evaluation-list">
+            <button class="evaluation-star">
+              <i class="xi-star-o"></i>
+              <i class="xi-star"></i>
+              <span class="xe-sr-only">별점 1점</span>
+              <span class="xe-sr-only status-on">활성화</span>
+              <span class="xe-sr-only status-off">비활성화</span>
+            </button>
+            <button class="evaluation-star on">
+              <i class="xi-star-o"></i>
+              <i class="xi-star"></i>
+              <span class="xe-sr-only">별점 2점</span>
+              <span class="xe-sr-only status-on">활성화</span>
+              <span class="xe-sr-only status-off">비활성화</span>
+            </button>
+            <button class="evaluation-star">
+              <i class="xi-star-o"></i>
+              <i class="xi-star"></i>
+              <span class="xe-sr-only">별점 3점</span>
+              <span class="xe-sr-only status-on">활성화</span>
+              <span class="xe-sr-only status-off">비활성화</span>
+            </button>
+            <button class="evaluation-star">
+              <i class="xi-star-o"></i>
+              <i class="xi-star"></i>
+              <span class="xe-sr-only">별점 4점</span>
+              <span class="xe-sr-only status-on">활성화</span>
+              <span class="xe-sr-only status-off">비활성화</span>
+            </button>
+            <button class="evaluation-star">
+              <i class="xi-star-o"></i>
+              <i class="xi-star"></i>
+              <span class="xe-sr-only">별점 5점</span>
+              <span class="xe-sr-only status-on">활성화</span>
+              <span class="xe-sr-only status-off">비활성화</span>
+            </button>
+          </div>
+        </div>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>가격</h3></div>
+            <div class="table-cell">싸네요.</div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>배송</h3></div>
+            <div class="table-cell">빨라요.</div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+      </div><!-- //table-wrap -->
+      <h2 class="lypop-table-title">상품평가</h2>
+      <div class="lypop-review">
+        <div class="lypop-review-head">
+          
+          <!-- [D] 활성화시 on 클래스 추가 -->
+          <button class="on">리뷰쓰기</button>
+          <button class="">미리보기</button>
+        </div>
+        <div class="lypop-review-body">
+          
+          <!-- [D] 활성화시 display: block 추가   -->
+          <div class="lypop-review-write" style="display: none">
+            <label class="xe-sr-only" for="review-write">리뷰 작성</label>
+            <textarea id="review-write"></textarea>
+          </div>
+          
+          <!-- [D] 활성화시 display: block 추가   -->
+          <div class="lypop-review-view" style="display: block">
+            <h3 class="xe-sr-only">미리보기용 텍스트</h3>
+            <p class="lypop-review-view-text">내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.내용이 보여지는 공감 잆니다. 자세한 스타일은 협의하여 내부 스타일로 작성 예정입니다.</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- //lypop-contents -->
+    <div class="lypop-btn">
+      <button type="button" class="lypop-btn-black">확인</button>
+      <button type="button" class="lypop-btn-white">닫기</button>
+    </div><!-- //lypop_btn -->
+  </div><!-- //lypop_tyep option -->
+  
+
+
+
+<div style="margin: 100px 0"></div>
+
+
+  
+  <!--[D] 레이어팝업의 위치 값 스타일은 없으며  stlye를 직접입력하거나 lypop-center를 넣으면 가운대정렬 하도록 해두었습니다. -->
+  <div class="lypop-type lypop-coupon">
+    <div class="lypop-header">
+      <h1 class="lypop-header-title">쿠폰사용</h1>
+    </div><!-- //lypop-header -->
+    <div class="lypop-contents">
+      <div class="table-wrap">
+        <h2 class="lypop-table-title">상품별할인</h2>
+        <div class="table-type6">
+          <div class="table-row">
+            <div class="table-cell">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product productproduct product productproduct product productproduct product productproduct</div>
+            <div class="table-cell price">
+              <div class="lypop-coupon-sum">
+                <h2 class="lypop-coupon-sum-title">상품 금액</h2>
+                <div class="lypop-coupon-sum-number">000,000,000 <span class="text">원</span></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- //table-type6 -->
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>판매자 할인</h3></div>
+            <div class="table-cell">
+              <div class="xe-select-box xe-btn">
+                <label>게릴라 이벤트 15% 할인 쿠폰 (2월 17일까지 사용가능)</label>
+                <select>
+                  <option>쿠폰 목록</option>
+                </select>
+              </div> <!-- //xe-select-box xe-btn -->
+            </div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>추가할인</h3></div>
+            <div class="table-cell">
+              <div class="xe-select-box xe-btn disable">
+                <label>적용 가능한 쿠폰이 없습니다.</label>
+                <select>
+                  <option>-</option>
+                </select>
+              </div> <!-- //xe-select-box xe-btn -->
+            </div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+        <div class="table-type6">
+          <div class="table-row">
+            <div class="table-cell">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product productproduct product productproduct product productproduct product productproduct</div>
+            <div class="table-cell price">
+              <div class="lypop-coupon-sum">
+                <h2 class="lypop-coupon-sum-title">상품 금액</h2>
+                <div class="lypop-coupon-sum-number">000,000,000 <span class="text">원</span></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- //table-type6 -->
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>판매자 할인</h3></div>
+            <div class="table-cell">
+              <div class="xe-select-box xe-btn">
+                <label>2,000원 즉시 할인 쿠폰 (2월 9일까지 사용 가능)</label>
+                <select>
+                  <option>쿠폰 목록</option>
+                </select>
+              </div> <!-- //xe-select-box xe-btn -->
+            </div>
+          </div><!-- //table-row -->
+          <div class="table-row">
+            <div class="table-cell header"><h3>추가할인</h3></div>
+            <div class="table-cell">
+              <div class="xe-select-box xe-btn disable">
+                <label>500원 중복 상품 할인쿠폰</label>
+                <select>
+                  <option>-</option>
+                </select>
+              </div> <!-- //xe-select-box xe-btn -->
+            </div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+      </div><!-- //table-wrap -->
+
+      <div class="table-wrap">
+        <h2 class="lypop-table-title">배송비 할인</h2>
+        <div class="table-type4">
+          <div class="table-row">
+            <div class="table-cell header"><h3>배송비 쿠폰</h3></div>
+            <div class="table-cell">
+              <div class="xe-select-box xe-btn">
+                <label>무료배송 쿠폰</label>
+                <select>
+                  <option>쿠폰 목록</option>
+                </select>
+              </div> <!-- //xe-select-box xe-btn -->
+            </div>
+          </div><!-- //table-row -->
+        </div><!-- //table-type4 -->
+      </div><!-- //table-wrap -->
+      
+      <div class="lypop-coupon-number">
+        <div class="cart-number">
+          <section class="cart-number-wrap">
+            <h2 class="xe-sr-only">장바구니 결제 정보</h2>
+            <article class="cart-number-price">
+              <h3 class="cart-number-title">상품금액</h3>
+              <div class="cart-number-text">111,111,111원</div>
+            </article>
+            <article class="cart-number-sale">
+              <h3 class="cart-number-title">할인금액</h3>
+              <div class="cart-number-text">
+                <span class="cart-number-icon"><i class="xi-minus-min"></i></span>
+                111,111,111원
+              </div>
+            </article>
+            <article class="cart-number-shipping">
+              <h3 class="cart-number-title">할인금액</h3>
+              <div class="cart-number-text">
+                <span class="cart-number-icon"><i class="xi-plus-min"></i></span>
+                111,111,111원
+              </div>
+            </article>
+            <article class="cart-number-sum">
+              <h3 class="cart-number-title">결제 예정 금액</h3>
+              <div class="cart-number-text">111,111,111원</div>
+              <div class="cart-number-caption xe-hidden-lg xe-hidden-md">적립금 혜택 <span>100</span>원</div>
+            </article>
+            
+          </section>
+          
+        </div> <!-- //lypop-coupon-number -->
+      
+        
+      </div>
+      
+    </div><!-- //lypop-contents -->
+    <div class="lypop-btn">
+      <button type="button" class="lypop-btn-black">적용</button>
+      <button type="button" class="lypop-btn-white">닫기</button>
+    </div><!-- //lypop_btn -->
+  </div><!-- //lypop_tyep option -->
+  
+
+
+
+  
+  <section class="guide">
+  <div class="container">
+    <h2 class="xe-sr-only">회사 기본정보</h2>
+    <article class="xe-shop-link">
+      <h3 class="xe-sr-only">관련링크</h3>
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">이용안내</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+      </ul>
+    </article>
+    <article class="xe-shop-guide">
+      <h3 class="xe-sr-only">회사 정보</h3>
+      <dl>
+        <dt>CS CENTER</dt>
+        <dd class="xe-shop-guide-bold"><i class="xi-call"></i>02-111-1234</dd>
+        <dd>평일  오전 10:00 ~ 오후 06:00</dd>
+        <dd>점심 오후 12:00 ~ 오후 01:00</dd>
+        <dd>휴무 토/일/공휴일</dd>
+      </dl>
+      <dl>
+        <dt>BANK</dt>
+        <dd>국민은행  12345-678-123123</dd>
+        <dd>국민은행  12345-678-123123</dd>
+        <dd>국민은행  12345-678-123123</dd>
+        <dd>예금주  홍길동</dd>
+      </dl>
+      <dl>
+        <dt>DELIVERY</dt>
+        <dd>반품주소  (12345) 서울특별시 강남구 00길 000빌딩 000호 DAZE</dd>
+        <dd>반품요청  우체국 택배  1588-1300</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+  <footer class="footer">
+  <section class="xe-company-info">
+    <div class="container">
+      <div class="xe-company-info-article">
+        <p>
+          <b>상호명</b>
+          <span>XE SHOP</span>
+        </p>
+        <p>
+          <b>대표자</b>
+          <span>홍길동</span>
+        </p>
+        <p>
+          <b>사업자등록번호</b>
+          <span>123-45-67890<a href="#">[사업자정보확인]</a></span>
+        </p>
+        <p>
+          <b>통신판매업</b>
+          <span>신고 제 2016-서울-0000호</span>
+        </p>
+      </div>
+      <div class="xe-company-info-article">
+        <p>
+          <b>주소</b>
+          <span>(12345) 서울특별시 강남구 00길 000빌딩 000호</span>
+        </p>
+        <p>
+          <b>대표전화</b>
+          <span>02-111-1234</span>
+        </p>
+      </div>
+      <div class="xe-company-info-article">
+        <p>
+          <b>개인정보관리책임자</b>
+          <span>홍길수</span>
+        </p>
+        <p>
+          <b>이메일</b>
+          <span>xeshop@xeshop.com</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="copyright">
+    <div class="container">
+      <p>Copyright &copy; 2016 쇼핑몰 이름 All rights reserved.&nbsp;&nbsp;&nbsp;<br class="xe-hidden-md xe-hidden-lg">MADE BY XE</p>
+    </div>
+  </section>
+</footer>
+</div>
+
+  
+
+</body>
+</html>

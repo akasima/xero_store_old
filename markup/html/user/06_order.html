@@ -1,0 +1,151 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+    
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+    
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  @@include('../../include/default_header.html')
+  @@include('../../include/default_logo.html')
+  @@include('../../include/default_menu.html')
+  @@include('../../include/default_search.html')
+  @@include('../../include/default_step_ui.html', {
+    "step_class": "step-3",
+    "step_title": "쇼핑 단계",
+    "step_contents": ["장바구니", "주문/결제", "주문완료"]
+  })
+
+  
+  <div class="xe-shop order">
+    <div class="container">
+      <div class="order-wrap">
+        <!-- [D] 주문 완료 시 노출 -->
+        <!-- <h1 class="order-title">주문이 완료되었습니다.</h1> -->
+        
+        <!-- [D] 주문 확인 시 노출 -->
+        <h1 class="order-title">주문이 확인되었습니다.</h1>
+        <p class="order-caption"> 2017.00.00.까지 은행에 입금해주시면 <br class="xe-hidden-lg xe-hidden-md"> 결제가 완료됩니다. </p>
+        
+        <div class="order-contents">
+          <div class="table-wrap">
+            <h2 class="xe-sr-only">주문번호별 상품 내역</h2>
+            <div class="table-type3">
+              <div class="table-header xe-hidden-sm xe-hidden-xs">
+                <div class="table-row">
+                  <div class="table-cell">주문번호</div>
+                  <div class="table-cell">상품정보</div>
+                </div>
+              </div> <!-- //table-header -->
+              <div class="table-body">
+                <div class="table-row">
+                  <div class="table-cell header">
+                    <h3 class="order-number xe-hidden-md xe-hidden-lg">주문 번호</h3>
+                    <p class="order-number">
+                      <span class="xe-hidden-xs xe-hidden-sm">2017-00-00</span>
+                      <br class="xe-hidden-xs xe-hidden-sm">
+                      <a href="#"><span>(2017000000000000)</span></a>
+                    </p>
+                    <button class="order-number-btn">
+                      <i class="xi-angle-right-thin"></i>
+                    </button>
+                  </div>
+                  <div class="table-cell">
+                    
+                    <!-- [D] 재사용 구간 -->
+                    <div class="order-product">
+                      <div class="order-product-title">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product product product product productproduct product productproduct product productproduct product product</div>
+                      <ul class="order-product-option">
+                        <li>컬러 : blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개</li>
+                        <li>컬러 : red / 사이즈 : XL / 2개</li>
+                        <li>컬러 : black / 사이즈 : S / 6개</li>
+                      </ul>
+                    </div> <!-- //order-product -->
+                    
+                    <!-- [D] 재사용 구간 -->
+                    <div class="order-product">
+                      <div class="order-product-title">상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product product product product productproduct product productproduct product productproduct product product</div>
+                      <ul class="order-product-option">
+                        <li>컬러 : blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개 blue / 사이즈 : M / 1개</li>
+                        <li>컬러 : red / 사이즈 : XL / 2개</li>
+                        <li>컬러 : black / 사이즈 : S / 6개</li>
+                      </ul>
+                    </div> <!-- //order-product -->
+                    
+                  </div>
+                </div> <!-- //table-row -->
+              </div><!-- //table-body -->
+            </div><!-- //table-type3 -->
+          </div><!-- //table-wrap -->
+          
+          <div class="order-aside">
+            <div class="order-aside-total">
+              <h1 class="order-aside-total-title">최종 결제금액</h1>
+              <p class="order-aside-total-number">000,000<span>원</span></p>
+            </div><!-- //order-aside-total -->
+            <div class="order-aside-info">
+              <h2 class="order-aside-info-title xe-hidden-lg xe-hidden-md">결제 정보</h2>
+              <div class="order-aside-info-detail">
+                <h3 class="order-aside-info-payment">무통장입금</h3>
+                <ul>
+                  <li>
+                    <span>입금은행 :</span><span>KB국민은행 (0000-0000-0000-0000)</span>
+                  </li>
+                  <li>
+                    <span>예금주 :</span><span>예금주명</span>
+                  </li>
+                  <li>
+                    <span>입금기한 :</span><span>0000.00.00.</span>
+                  </li>
+                </ul>
+              </div><!-- //order-aside-infor-detail -->
+            </div><!-- //order-aside-infor -->
+          </div><!-- //order-aside -->
+        </div><!-- //order-contents -->
+        
+        <section class="page-btn">
+          <h2 class="xe-sr-only">주문 완료 버튼</h2>
+          <button type="submit" class="page-btn-black">구매내역 확인</button>
+          <button type="submit" class="page-btn-white">쇼핑 계속하기</button>
+        </section>
+        
+      </div><!-- //order-wrap -->
+    </div><!-- //container  -->
+  </div><!-- //cart -->
+  
+  @@include('../../include/default_guide.html')
+  @@include('../../include/default_footer.html')
+</div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+    
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+    
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  @@include('../../include/default_header.html')
+  @@include('../../include/default_logo.html')
+  @@include('../../include/default_menu.html')
+  @@include('../../include/default_search.html')
+  
+  <div class="xe-shop category-item-wrap xe-hidden-sm xe-hidden-xs">
+    <div class="container">
+      <ol class="category-item">
+        <li><a href="#">HOME</a><i class="xi-angle-right-thin"></i></li>
+        <li>
+          <div class="xe-dropdown ">
+            <button class="xe-btn" type="button" data-toggle="xe-dropdown xe-ellesis">CATEGORYCATEGORYCATEGORY 1</button>
+            <ul class="xe-dropdown-menu">
+              <li><a href="#">text</a></li>
+              <li><a href="#">text</a></li>
+            </ul>
+          </div>
+          <i class="xi-angle-right-thin"></i>
+        </li>
+        <li>
+          <div class="xe-dropdown ">
+            <button class="xe-btn" type="button" data-toggle="xe-dropdown">2dqpth</button>
+            <ul class="xe-dropdown-menu">
+              <li><a href="#">text</a></li>
+              <li><a href="#">text</a></li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div><!-- //category-item-wrap -->
+  
+  <div class="xe-shop product">
+    <div class="container">
+      <div class="product-wrap">
+        <h2 class="xe-sr-only">상품 관련 정보</h2>
+        <div class="product-img">
+          <h3 class="xe-sr-only">상품 이미지</h3>
+          <div class="product-img-view">
+            <img src="../../../assets/img/tmp_detail.jpg" alt="">
+            <button class="xe-btn left"><i class="xi-angle-left-thin"><span class="xe-sr-only">이전 사진 보기</span></i></button>
+            <button class="xe-btn right"><i class="xi-angle-right-thin"><span class="xe-sr-only">다음 사진 보기</span></i></button>
+          </div>
+          <div class="product-img-list">
+            <h3 class="xe-sr-only">상품 이미지 목록</h3>
+            <ul>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+              <li><a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a></li>
+            </ul>
+          </div>
+        </div><!-- //product-img  -->
+        <div class="product-info">
+          <div class="product-info-top">
+            <h3 class="product-info-title">지금부터 봄까지입는<br>데일리 인기신상 ITEM</h3>
+            <div class="label_wrap">
+              <span class="xe-shop-tag black">new</span>
+              <span class="xe-shop-tag">best</span>
+            </div>
+            <p class="product-info-title-caption">간단한 상품 설명 영역간단한 상품 설명 영역간단한 상품 설명 영역간단한 상품 설명 영역간단한 상품 설명 영역간단한 상품 설명 영역간단한 상품 설명 영역</p>
+          </div>
+          <div class="product-info-container">
+              <div class="product-info-cell price">110,00<span>원</span></div>
+              <div class="product-info-cell before-price">120,00<span>원</span></div>
+              <div class="product-info-favor">
+                <button type="button" class="favor-btn"> 구매 혜택 보기</button>
+                
+                <!-- [D] 클릭시 on 클래스 추가 부탁드립니다. -->
+                <div class="xe-tooltip bottom " role="tooltip">
+                  <div class="xe-tooltip-arrow"></div>
+                  <div class="xe-tooltip-inner">
+                    <h4 class="favor-title">구매혜택</h4>
+                    <div>
+                      <p class="favor-text">추가 적립 포인트 최대 1,000원</p>
+                    </div>
+                    <div>
+                      <p class="favor-text">구매평 작성시 포인트 최대 500원</p>
+                    </div>
+                    <h4 class="favor-title">무이자할부</h4>
+                    <div>
+                      <p class="favor-text">KB국민카드</p>
+                      <p class="favor-text right">2,3,4,5개월 무이자 (5만원 이상)</p>
+                    </div>
+                    <div>
+                      <p class="favor-text">삼성카드</p>
+                      <p class="favor-text right">2,3,4,5개월 무이자 (5만원 이상)</p>
+                    </div>
+                    <button type="button" class="btn-tooltip-close"><i class="xi-close-thin"></i><span class="xe-sr-only">닫기</span></button>
+                  </div>
+                </div>
+              </div><!-- //product-info-favor  -->
+              <div class="product-info-cell shipping">배송비 2,500원(주문시 결제)</div>
+              
+              <div class="btn-buy-wrap xe-hidden-md xe-hidden-lg">
+                <button class="xe-btn xe-btn-buy">구매하기</button>
+                <button class="xe-btn"><i class="xe-visible-xs xe-visible-sm xi-basket"></i><span class="xe-visible-md xe-visible-lg">장바구니</span></button>
+                <button class="xe-btn"><i class="xe-visible-xs xe-visible-sm xi-heart"></i><span class="xe-visible-md xe-visible-lg">찜하기</span></button>
+              </div><!-- //btn-buy-wrap -->
+          </div>
+          
+          <!-- [D] 모바일에서 활성화시 on 클래스 추가 부탁드립니다 -->
+          <div class="product-info-options on">
+            <h3 class="xe-sr-only">상품 구매 옵션</h3>
+            
+            <!-- [D] 클릭시  on 클래스 토글  -->
+            <button type="button" class="btn-option-toggle xe-visible-xs xe-visible-sm">
+              <i class="xi-angle-down-thin"></i>
+              <span class="xe-sr-only">상품 옵션 패널 열기 / 닫기</span>
+            </button>
+            <div class="product-info-select">
+              <div class="xe-select-box xe-btn">
+                <label>컬러 선택</label>
+                <select>
+                  <option disabled="">Master</option>
+                  <option selected="selected">1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+            </div><!-- //product-info-select -->
+            <div class="product-info-select">
+              <div class="xe-select-box xe-btn">
+                <label>사이즈 선택</label>
+                <select>
+                  <option disabled="">Master</option>
+                  <option selected="selected">1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+            </div><!-- //product-info-select -->
+            
+            <div class="product-info-counter">
+              <div class="product-info-cell">
+                <div class="product-info-counter-title">블루 / M 블루 / M 블루 / M 블루 / 블루 / M 블루 / M 블루 / M 블루 / 블루 / M 블루 / M 블루 / M 블루 / 블루 / M 블루 / M 블루 / M 블루 / </div>
+                <div class="xe-spin-box">
+                  <button type="button"><i class="xi-minus-thin"></i><span class="xe-sr-only">감소</span></button>
+                  <p>1</p>
+                  <button type="button"><i class="xi-plus-thin"></i><span class="xe-sr-only">증가</span></button>
+                </div>
+                <p class="product-info-counter-sum">000,110,500원</p>
+                <button class="xe-btn xe-btn-remove"><i class="xi-close-thin"></i><span class="xe-sr-only">이 옵션 삭제</span></button>
+              </div> <!-- //product-info-cell -->
+              
+              <div class="product-info-low xe-border-top xe-border-bottom counter" style="display: none">
+                <div class="product-info-cell">레드 / XXL</div>
+                <div class="product-info-cell">
+                  <div class="xe-spin-box">
+                    <button type="button"><i class="xi-minus-thin"></i><span class="xe-sr-only">감소</span></button>
+                    <p>1</p>
+                    <button type="button"><i class="xi-plus-thin"></i><span class="xe-sr-only">증가</span></button>
+                  </div>
+                  <p>110,500원</p>
+                  <button class="xe-btn xe-btn-remove"><i class="xi-close-thin"></i><span class="xe-sr-only">이 옵션 삭제</span></button>
+                </div>
+              </div>
+            
+            </div> <!-- //product-info-counter -->
+            
+            <div class="product-info-sum">
+              <div class="product-info-sum-title">총 합계 금액</div>
+              <div class="product-info-sum-num">
+                <p>331,500</p><span>원</span>
+              </div>
+            </div>
+            
+            <div class="btn-buy-wrap">
+              <button class="xe-btn xe-btn-buy">구매하기</button>
+              <button class="xe-btn"><i class="xe-visible-xs xe-visible-sm xi-basket"></i><span class="xe-visible-md xe-visible-lg">장바구니</span></button>
+              <button class="xe-btn"><i class="xe-visible-xs xe-visible-sm xi-heart"></i><span class="xe-visible-md xe-visible-lg">찜하기</span></button>
+            </div><!-- //btn-buy-wrap -->
+            
+          </div><!-- //options -->
+        </div><!-- //product-info  -->
+      </div><!-- //product-wrap  -->
+    </div><!-- //container  -->
+  </div><!-- //product -->
+  
+  <div class="xe-shop detail">
+    <div class="container">
+      <div class="detail-wrap">
+        <h2 class="xe-sr-only">상품 상세 보기</h2>
+        <div class="detail-tab">
+          <h3 class="xe-sr-only">상품 정보 탭</h3>
+          <ul>
+            <li class="active"><a href="#">상품정보</a></li>
+            <li><a href="#">구매평</a></li>
+            <li><a href="#">Q&amp;A</a></li>
+            <li><a href="#">반품정보</a></li>
+          </ul>
+        </div>
+        <div class="detail-container">
+          <div class="detail-information">
+            <h3 class="xe-sr-only">상품 상세 정보</h3>
+            <div class="detail-information-table">
+              <div class="detail-information-row">
+                <div class="detail-information-cell th">상품상태</div>
+                <div class="detail-information-cell">상품상태 상품상태상품상태상품상태상품상태상품상태  상품상태 상품상태 상품상태 상품상태 상품상태 상품상태 상품상태 상품상태 상품상태 상품상태 상품상태</div>
+                <div class="detail-information-cell th">상품번호</div>
+                <div class="detail-information-cell">상품번호 상품번호 상품번호</div>
+              </div>
+              <div class="detail-information-row">
+                <div class="detail-information-cell th">제조사</div>
+                <div class="detail-information-cell"></div>
+                <div class="detail-information-cell th">브랜드</div>
+                <div class="detail-information-cell"></div>
+              </div>
+              <div class="detail-information-row">
+                <div class="detail-information-cell th">모델명</div>
+                <div class="detail-information-cell"></div>
+                <div class="detail-information-cell th">원산지</div>
+                <div class="detail-information-cell"></div>
+              </div>
+              <div class="detail-information-row">
+                <div class="detail-information-cell th">영수증 발급</div>
+                <div class="detail-information-cell"></div>
+                <div class="detail-information-cell th">A/S 안내</div>
+                <div class="detail-information-cell"></div>
+              </div>
+              
+            </div>
+            <div class="detail-information-view">
+              <!-- [D] 상품 상세 정보 구역-->
+              <img src="../../../assets/img/tmp_detail_view.jpg" alt="">
+            </div>
+          </div>
+          <!-- <div class="detail-talks"></div> -->
+          <!-- <div class="detail-qna"></div> -->
+          <!-- <div class="detail-as"></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  @@include('../../include/default_guide.html')
+  @@include('../../include/default_footer.html')
+</div>
+
+  
+
+</body>
+</html>

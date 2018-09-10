@@ -1,0 +1,98 @@
+{
+    "name": "xpressengine-plugin/xero-store",
+    "description": "This Package is Xpressengine Plugin - 쇼핑몰 플러그인.",
+    "keywords": [
+        "xpressengine",
+        "plugin"
+    ],
+    "license": "LGPL-2.1",
+    "version": "0.1.0",
+    "type": "xpressengine-plugin",
+    "support": {
+        "email": "input@your.email"
+    },
+    "authors": [
+        {
+            "name": "input your name",
+            "email": "input@your.email",
+            "homepage": "http://input.your.site",
+            "role": "Developer"
+        }
+    ],
+    "extra": {
+        "xpressengine": {
+            "title": "쇼핑몰 플러그인",
+            "component": {
+                "module/rich_shop@shop": {
+                    "class": "Akasima\\RichShop\\Modules\\Shop",
+                    "name": "Shop items",
+                    "description": "shop 아이템 목록 출력 모듈"
+                },
+                "module/rich_shop@shop/skin/rich_shop@moduleSkin": {
+                    "class": "Akasima\\RichShop\\Skins\\ModuleSkin",
+                    "name": "shop 메뉴에서 사용하는 기본 스킨",
+                    "description": "The Skin supported by Rich_shop plugin."
+                },
+                "rich_shop/skin/rich_shop@shopSkin": {
+                    "class": "Akasima\\RichShop\\Skins\\ShopSkin",
+                    "name": "shop 기본 스킨",
+                    "description": "The Skin supported by Rich_shop plugin."
+                },
+                "rich_shop/settingsSkin/rich_shop@settingsSkin": {
+                    "class": "Akasima\\RichShop\\Skins\\SettingsSkin",
+                    "name": "shop 관리자 스킨",
+                    "description": "The Skin supported by Rich_shop plugin."
+                },
+                "theme/rich_shop@theme": {
+                    "class": "Akasima\\RichShop\\Theme\\Theme",
+                    "name": "쇼핑몰 테마",
+                    "description": "The Theme supported by Rich_shop plugin."
+                },
+                "widget/rich_shop@cross": {
+                    "class": "Akasima\\RichShop\\Widgets\\CrossWidget",
+                    "name": "쇼핑몰 크로스 위젯",
+                    "description": ""
+                },
+                "widget/rich_shop@list": {
+                    "class": "Akasima\\RichShop\\Widgets\\ListWidget",
+                    "name": "쇼핑몰 리스트 위젯",
+                    "description": ""
+                },
+                "widget/rich_shop@slider": {
+                    "class": "Akasima\\RichShop\\Widgets\\SliderWidget",
+                    "name": "쇼핑몰 슬라이더 위젯",
+                    "description": ""
+                },
+                "widget/rich_shop@spotSlider": {
+                    "class": "Akasima\\RichShop\\Widgets\\SpotSliderWidget",
+                    "name": "쇼핑몰 스팟 슬라이더 위젯",
+                    "description": ""
+                },
+                "widget/rich_shop@tab": {
+                    "class": "Akasima\\RichShop\\Widgets\\TabWidget",
+                    "name": "쇼핑몰 탭 위젯",
+                    "description": ""
+                },
+                "fieldType/xpressengine@appraisal": {
+                    "class": "Akasima\\RichShop\\FieldTypes\\Appraisal",
+                    "name": "구매평 점수 등록",
+                    "description": ""
+                },
+                "fieldType/xpressengine@appraisal/fieldSkin/xpressengine@default": {
+                    "class": "Akasima\\RichShop\\FieldTypes\\FieldSkins\\AppraisalDefaultSkin",
+                    "name": "구매평 점수 등록 기본 스킨",
+                    "description": ""
+                }
+            }
+        }
+    },
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Akasima\\RichShop\\": "src/"
+        },
+        "classmap": [
+            "theme/Theme.php"
+        ]
+    }
+}

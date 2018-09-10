@@ -1,0 +1,49 @@
+/*reset*/
+
+header ul{
+	margin:0;
+	padding:0;
+	li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+}
+
+.spot{
+	p, h2{
+		margin:0;
+		padding:0;
+	}
+};
+
+.board-area h3,
+.board-area p,
+.footer ul,
+.footer p,
+.skip,
+.features p,
+.features h2,
+.contributor p,
+.contributor h2,
+.contributor dt,
+.contributor dd,
+.contributor ul,
+.privacy dl,
+.privacy dd,
+.privacy ul,
+.sub-content h2{
+	margin:0;
+	padding: 0;
+}
+
+.footer ul li{
+	list-style: none;
+}
+
+.footer a,
+.contributor a,
+.privacy_lst a{
+	text-decoration: none;
+}

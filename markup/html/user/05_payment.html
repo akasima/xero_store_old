@@ -1,0 +1,713 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+    
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+    
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  @@include('../../include/default_header.html')
+  @@include('../../include/default_logo.html')
+  @@include('../../include/default_menu.html')
+  @@include('../../include/default_search.html')
+  @@include('../../include/default_step_ui.html', {
+    "step_class": "step-2",
+    "step_title": "쇼핑 단계",
+    "step_contents": ["장바구니", "주문/결제", "주문완료"]
+  })
+  
+  <div class="xe-shop payment">
+    <div class="container">
+      <div class="cart-wrap">
+        <h1 class="page-title">교환수거 정보입력</h1>
+        <button type="button" class="btn-cart-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i></button>
+        <div class="cart-product">
+          <div class="cart-product-header xe-hidden-xs xe-hidden-sm">
+            <h3 class="xe-sr-only">목록</h3>
+            <ul>
+              <li>상품정보</li>
+              <li>상품금액</li>
+              <li>할인금액</li>
+              <li>수량</li>
+              <li>배송비</li>
+              <li>주문금액</li>
+            </ul>
+          </div><!-- //cart-product-header -->
+          <div class="cart-product-body">
+            <div class="cart-product-info">
+              <div class="cart-product-img">
+                <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+              </div><!-- //cart-product-img -->
+              <div class="cart-product-name">
+                상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+              </div><!-- //cart-product-name -->
+              <div class="cart-product-option">
+                <ul class="cart-product-option-list">
+                  <li>
+                    <span>컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 </span>
+                    <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                  </li>
+                  <li>
+                    <span>컬러 : red / 사이즈 : XL / 2개 </span>
+                    <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                  </li>
+                  <li>
+                    <span>컬러 : black / 사이즈 : S / 6개 </span>
+                    <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                  </li>
+                </ul>
+              </div><!-- //cart-product-option -->
+            </div><!-- //cart-product-info -->
+            <button type="button" class="btn-cart-num-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i><span class="xe-sr-only">금액 정보 토글</span></button>
+            <div class="cart-product-num">
+              <div class="cart-product-num-box">
+                <div class="cart-product-price">
+                  <span class="cart-product-title">상품금액</span>
+                  <span class="cart-product-text">111,111,111원</span>
+                </div><!-- //cart-product-price -->
+                <div class="cart-product-sale">
+                  <span class="cart-product-title">할인금액</span>
+                  <span class="cart-product-text">111,111,111원</span>
+                </div><!-- //cart-product-sale -->
+                <div class="cart-product-quantity">
+                  <span class="cart-product-title">수량</span>
+                  <span class="cart-product-text">111개</span>
+                </div><!-- //cart-product-num -->
+                <div class="cart-product-shipping">
+                  <span class="cart-product-title">배송비</span>
+                  <span class="cart-product-text">111,111,111원</span>
+                </div><!-- //cart-product-shipping -->
+                <div class="cart-product-sum">
+                  <span class="cart-product-title">주문 금액</span>
+                  <span class="cart-product-text">111,111,111원</span>
+                </div><!-- //cart-product-sum -->
+              </div><!-- //cart-product-num-box -->
+            </div><!-- //cart-product-num -->
+            
+          </div><!-- //cart-product-body -->
+
+        </div> <!-- //cart-product -->
+        
+        <div class="payment-bottom">
+          <div class="table-wrap">
+            <h4 class="table-type-title">주문고객 정보</h4>
+            <button type="button" class="btn-cart-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i></button>
+            <div class="table-type">
+              <div class="table-row">
+                <div class="table-cell header">
+                  이름
+                </div>
+                <div class="table-cell">
+                  홍길동
+                </div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell header">
+                  연락처
+                </div>
+                <div class="table-cell">
+                  010-0000-000
+                </div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell header">
+                  이메일
+                </div>
+                <div class="table-cell">
+                  test@test.com
+                </div>
+              </div>
+            </div><!-- //table-type -->
+          </div><!-- //table-wrap -->
+          
+          <div class="table-wrap">
+            <h4 class="table-type-title">배송지 정보</h4>
+            <button type="button" class="btn-cart-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i></button>
+            <div class="table-type">
+              <div class="table-row">
+                <div class="table-cell header">
+                  배송지 선택
+                </div>
+                <div class="table-cell">
+                  <label class="xe-label">
+                    <input type="radio" checked="checked" name="addr">
+                    <span class="xe-input-helper"></span>
+                    <span class="xe-label-text">기본 배송지</span>
+                  </label>
+                  <label class="xe-label">
+                    <input type="radio" name="addr">
+                    <span class="xe-input-helper"></span>
+                    <span class="xe-label-text">신규 배송지</span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="table-row">
+                <div class="table-cell header">
+                  이름
+                </div>
+                <div class="table-cell">
+                  <input type="text" class="xe-form-control input-195">
+                </div>
+              </div>
+              
+              <div class="table-row">
+                <div class="table-cell header">
+                  연락처
+                </div>
+                <div class="table-cell">
+                  <div class="phone-number">
+                    <div class="xe-select-box xe-btn table-select">
+                      <label>010</label>
+                      <select>
+                        <option>010</option>
+                        <option>011</option>
+                        <option>017</option>
+                        <option>016</option>
+                      </select>
+                    </div>
+                    <span class="margin-between">-</span>
+                    <input type="text" class="xe-form-control" maxlength="4">
+                    <span class="margin-between">-</span>
+                    <input type="text" class="xe-form-control" maxlength="4">
+                  </div> <!-- //table-cell-number -->
+                </div>
+              </div>
+              
+              <div class="table-row">
+                <div class="table-cell header">
+                  주소
+                </div>
+                <div class="table-cell">
+                  <div class="table-cell-row">
+                    <input type="text" class="xe-form-control input-only-72" disabled>
+                    <button type="button" class="xe-btn xe-btn-secondary">우편번호</button>
+                  </div>
+                  <div class="table-cell-row">
+                    <input type="text" class="xe-form-control input-195" disabled>
+                    <input type="text" class="xe-form-control">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="table-row">
+                <div class="table-cell header">
+                  배송 메세지
+                </div>
+                <div class="table-cell">
+                  <input type="text" class="xe-form-control table-input">
+                </div>
+              </div>
+              
+            </div><!-- //table-type -->
+          </div><!-- //table-wrap -->
+          
+          
+          <div class="table-wrap">
+            <h4 class="table-type-title">할인 정보</h4>
+            <button type="button" class="btn-cart-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i></button>
+            <div class="table-type">
+              <div class="table-row">
+                <div class="table-cell header">
+                  할인 쿠폰
+                </div>
+                <div class="table-cell">
+                  <input type="text" class="xe-form-control table-input table-input-sale" value="1,000">
+                  원
+                  <button type="button" class="xe-btn xe-btn-secondary table-btn-sale">쿠폰사용</button>
+                  <span class="xe-hidden-xs xe-hidden-sm">(사용가능쿠폰 1장 / 보유쿠폰 2장)</span>
+                </div>
+              </div>
+              
+              <div class="table-row">
+                <div class="table-cell header">
+                  적립금 사용
+                </div>
+                <div class="table-cell">
+                  <input type="text" class="xe-form-control table-input table-input-sale" value="1,000">
+                  원
+                  <button type="button" class="xe-btn xe-btn-secondary table-btn-sale">쿠폰사용</button>
+                  <span class="xe-hidden-xs xe-hidden-sm">(사용가능적립금 : 10,000원)</span>
+                </div>
+              </div>
+              
+            </div><!-- //table-type -->
+          </div><!-- //table-wrap -->
+          
+          <div class="table-wrap">
+            <h4 class="table-type-title">결제 정보 입력</h4>
+            <div class="table-caption">
+              <label class="xe-label">
+                <input type="checkbox">
+                <span class="xe-input-helper"></span>
+                <span class="xe-label-text">지금 선택한 결제수단을 다음에도 사용</span>
+              </label>
+            </div><!-- //table-caption -->
+            <button type="button" class="btn-cart-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i></button>
+            <div class="table-type2">
+              <div class="table-row">
+                <div class="table-cell header">
+                  간편 결제
+                </div>
+                <div class="table-cell btn-form">
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" checked="checked" name="simple-pay">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text"><i class="icon-naverpay"></i><i class="xe-sr-only">네이버페이</i></span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" checked="checked" name="simple-pay">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text"><i class="icon-payco"></i><i class="xe-sr-only">페이코</i></span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" checked="checked" name="simple-pay">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text"><i class="icon-syruppay"></i><i class="xe-sr-only">시럽페이</i></span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" checked="checked" name="simple-pay">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text"><i class="icon-paynow"></i><i class="xe-sr-only">페이나우</i></span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                </div>
+              </div> <!-- //table-row -->
+              
+              <div class="table-row">
+                <div class="table-cell header">
+                  일반 결제
+                </div>
+                <div class="table-cell btn-form">
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" checked="checked" name="pay-type">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text">신용카드</span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" name="pay-type">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text">실시간 계좌 이체</span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" name="pay-type">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text">무통장 입금</span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                  <div class="table-cell-inside">
+                    <label class="xe-label">
+                      <input type="radio" name="pay-type">
+                      <span class="xe-input-helper"></span>
+                      <span class="xe-label-text">휴대폰 결제</span>
+                    </label>
+                  </div><!-- //table-cell-inside -->
+                </div>
+              </div><!-- //table-row -->
+              
+              <div class="table-row">
+                <div class="table-cell header xe-hidden-sm xe-hidden-xs">
+                </div>
+                <div class="table-cell type-cell">
+                  
+                  <!-- [D] 신용카드 -->
+                  <div class="pay-type type" style="display: block">
+                    <div class="pay-cash-row">
+                      <div class="pay-cash-col">
+                        <label for="pay-info-card" class="pay-cash-label">카드 선택</label>
+                        <div class="xe-select-box xe-btn table-select input-150">
+                          <label>선택하세요</label>
+                          <select id="pay-info-card">
+                            <option></option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="pay-cash-col">
+                        <label for="pay-info-installment" class="pay-cash-label">할부 선택</label>
+                        <div class="xe-select-box xe-btn table-select input-150">
+                          <label>일시불</label>
+                          <select id="pay-info-installment">
+                            <option></option>
+                          </select>
+                        </div>
+                      </div>
+                       <button class="xe-btn pay-cash-btn xe-hidden-sm xe-hidden-xs">무이자 할부 안내</button>
+                    </div><!-- //pay-cash-row -->
+                  </div><!-- //pay-type type -->
+                  
+                  <!-- [D] 실시간 계좌이체  -->
+                  <div class="pay-type type2" style="display: none">
+                    
+                    <div class="pay-cash-row">
+                      <div class="pay-cash-col">
+                        <label class="xe-label">
+                          <input type="radio" checked="checked" name="pay-tax">
+                          <span class="xe-input-helper"></span>
+                          <span class="xe-label-text">개인소득공제용</span>
+                        </label>
+                      </div>
+                      <div class="pay-cash-col">
+                        <label class="xe-label">
+                          <input type="radio" checked="checked" name="pay-tax">
+                          <span class="xe-input-helper"></span>
+                          <span class="xe-label-text">사업자증빙용</span>
+                        </label>
+                      </div>
+                      <div class="pay-cash-col">
+                        <label class="xe-label">
+                          <input type="radio" checked="checked" name="pay-tax">
+                          <span class="xe-input-helper"></span>
+                          <span class="xe-label-text">미발행</span>
+                        </label>
+                      </div>
+                    </div><!-- //pay-cash-row -->
+                    <div class="pay-cash-row">
+                      <div class="pay-cash-col">
+                        <div class="xe-select-box xe-btn table-select input-150">
+                          <label>현금영수증 카드번호</label>
+                          <select>
+                            <option></option>
+                            <option></option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="pay-cash-col">
+                        <input type="text" class="xe-form-control input-55">
+                        <span class="margin-between">-</span>
+                        <input type="text" class="xe-form-control input-55">
+                        <span class="margin-between">-</span>
+                        <input type="text" class="xe-form-control input-55">
+                        <span class="margin-between">-</span>
+                        <input type="text" class="xe-form-control input-55">
+                      </div>
+                    </div><!-- //pay-cash-row -->
+
+                  </div><!-- //pay-type type2 -->
+                  
+                  <!-- [D] 무통장  -->
+                  <div class="pay-type type3" style="display: none">
+                    <div class="pay-cash">
+                      <div class="pay-cash-top">
+                        <div class="pay-cash-row">
+                          <div class="pay-cash-col">
+                            <label for="pay-info-bank" class="pay-cash-label">은행 선택</label>
+                            <div class="xe-select-box xe-btn table-select input-170">
+                              <label>선택하세요</label>
+                              <select id="pay-info-bank">
+                                <option>KB국민</option>
+                                <option>KEB하나</option>
+                                <option>우리</option>
+                                <option>신한</option>
+                                <option>KDB산업</option>
+                                <option>IBK기업</option>
+                                <option>NH농협</option>
+                                <option>SC제일</option>
+                                <option>BNK부산</option>
+                                <option>DGB대구</option>
+                                <option>한국씨티</option>
+                                <option>BNK경남</option>
+                                <option>Sh수협</option>
+                                <option>광주</option>
+                                <option>전북</option>
+                                <option>제주</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="pay-cash-col">
+                            <label for="pay-info-name" class="pay-cash-label">입금자명</label>
+                            <input type="text" id="pay-info-name" class="xe-form-control input-150">
+                          </div>
+                        </div><!-- //pay-cash-row -->
+                        <div class="pay-cash-row">
+                          <div class="pay-cash-col">
+                            <label class="xe-label">
+                              <input type="radio" checked="checked" name="pay-tax">
+                              <span class="xe-input-helper"></span>
+                              <span class="xe-label-text">개인소득공제용</span>
+                            </label>
+                          </div>
+                          <div class="pay-cash-col">
+                            <label class="xe-label">
+                              <input type="radio" checked="checked" name="pay-tax">
+                              <span class="xe-input-helper"></span>
+                              <span class="xe-label-text">사업자증빙용</span>
+                            </label>
+                          </div>
+                          <div class="pay-cash-col">
+                            <label class="xe-label">
+                              <input type="radio" checked="checked" name="pay-tax">
+                              <span class="xe-input-helper"></span>
+                              <span class="xe-label-text">미발행</span>
+                            </label>
+                          </div>
+                        </div><!-- //pay-cash-row -->
+                        
+                        <div class="pay-cash-row">
+                          <div class="pay-cash-col">
+                            <div class="xe-select-box xe-btn table-select input-150">
+                              <label>현금영수증 카드번호</label>
+                              <select>
+                                <option></option>
+                                <option></option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="pay-cash-col">
+                            <input type="text" class="xe-form-control input-55">
+                            <span class="margin-between">-</span>
+                            <input type="text" class="xe-form-control input-55">
+                            <span class="margin-between">-</span>
+                            <input type="text" class="xe-form-control input-55">
+                            <span class="margin-between">-</span>
+                            <input type="text" class="xe-form-control input-55">
+                          </div>
+                        </div><!-- //pay-cash-row -->
+                        
+                      </div>
+                      <div class="pay-cash-bottom">
+                        <b class="pay-cash-title">환불계좌 정보</b>
+                        <div class="pay-cash-row">
+                          <div class="pay-cash-col">
+                            <label for="pay-info-bank2" class="pay-cash-label">은행 선택</label>
+                            <div class="xe-select-box xe-btn table-select input-170">
+                              <label>선택하세요</label>
+                              <select id="pay-info-bank2">
+                                <option>KB국민</option>
+                                <option>KEB하나</option>
+                                <option>우리</option>
+                                <option>신한</option>
+                                <option>KDB산업</option>
+                                <option>IBK기업</option>
+                                <option>NH농협</option>
+                                <option>SC제일</option>
+                                <option>BNK부산</option>
+                                <option>DGB대구</option>
+                                <option>한국씨티</option>
+                                <option>BNK경남</option>
+                                <option>Sh수협</option>
+                                <option>광주</option>
+                                <option>전북</option>
+                                <option>제주</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="pay-cash-col">
+                            <label for="pay-info-name2" class="pay-cash-label">입금자명</label>
+                            <input type="text" id="pay-info-name2" class="xe-form-control input-170">
+                          </div>
+                        </div> <!-- //pay-cash-row -->
+                        <div class="pay-cash-row">
+                          <div class="pay-cash-col">
+                            <label for="pay-info-account" class="pay-cash-label">계좌번호</label>
+                            <input type="text" id="pay-info-account" class="xe-form-control input-426">
+                          </div>
+                        </div> <!-- //pay-cash-row -->
+                        
+                      </div>
+                    </div>
+                  </div><!-- //pay-type type3 -->
+                  
+                  <!-- [D] 휴대폰결제  -->
+                  <div class="pay-type type4" style="display: none">
+                    <div class="pay-cash-col">
+                      <div class="phone-number">
+                        <div class="xe-select-box xe-btn table-select">
+                          <label>010</label>
+                          <select>
+                            <option>010</option>
+                            <option>011</option>
+                            <option>017</option>
+                            <option>016</option>
+                          </select>
+                        </div>
+                        <span class="margin-between">-</span>
+                        <input type="text" class="xe-form-control" maxlength="4">
+                        <span class="margin-between">-</span>
+                        <input type="text" class="xe-form-control" maxlength="4">
+                      </div> <!-- //table-cell-number -->
+                    </div><!-- //pay-cash-col  -->
+                    
+                  </div><!-- //pay-type type4 -->
+                  
+                </div>
+              </div><!-- //table-row -->
+            </div><!-- //table-type -->
+          </div><!-- //table-wrap -->
+          
+          <aside class="payment-aside">
+            <div class="payment-aside-top">
+              <div class="payment-aside-title">
+                <h1>최종 결제금액</h1>
+              </div>
+              
+              <button type="button" class="btn-cart-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i></button>
+              
+              <div class="payment-aside-info">
+                <div class="payment-aside-info-row">
+                  <h2 class="payment-aside-info-title">상품금액</h2>
+                  <div class="payment-aside-info-num">
+                    44,000원
+                  </div>
+                </div><!-- //payment-aside-info-row -->
+                
+                <div class="payment-aside-info-row">
+                  <h2 class="payment-aside-info-title">할인금액</h2>
+                  <div class="payment-aside-info-num">
+                    <span class="payment-aside-icon"><i class="xi-minus-min"></i></span>
+                    1,000원
+                  </div>
+                </div><!-- //payment-aside-info-row -->
+                
+                <div class="payment-aside-info-row">
+                  <h2 class="payment-aside-info-title">적립금 사용</h2>
+                  <div class="payment-aside-info-num">
+                    <span class="payment-aside-icon"><i class="xi-minus-min"></i></span>
+                    1,000원
+                  </div>
+                </div><!-- //payment-aside-info-row -->
+                
+                <div class="payment-aside-info-row">
+                  <h2 class="payment-aside-info-title">배송비</h2>
+                  <div class="payment-aside-info-num">
+                    <span class="payment-aside-icon"><i class="xi-plus-min"></i></span>
+                    2,500원
+                  </div>
+                </div><!-- //payment-aside-info-row -->
+                
+                <div class="payment-aside-info-sum">
+                  <h2 class="payment-aside-info-title">최종 결제금액</h2>
+                  <div class="payment-aside-info-num">
+                    2,500원
+                  </div>
+                </div><!-- //payment-aside-info-row -->
+                
+                <button type="button" class="xe-btn payment-aside-btn">결제하기</button>
+                
+              </div><!-- //payment-aside-info -->
+            </div><!-- //payment-aside-top -->
+            
+            <div class="payment-aside-agree">
+              <h1 class="xe-sr-only">동의</h1>
+              
+              <div class="payment-aside-agree-all xe-form-inline">
+                <label class="xe-label">
+                  <input type="checkbox">
+                  <span class="xe-input-helper"></span>
+                  <span class="xe-label-text agree-all-text">전체 동의합니다.</span>
+                </label>
+              </div><!-- //payment-aside-agree-all -->
+              
+              <div class="payment-aside-agree-article">
+                <div class="payment-aside-agree-header xe-form-inline">
+                  <label class="xe-label">
+                    <input type="checkbox">
+                    <span class="xe-input-helper"></span>
+                    <span class="xe-label-text">구매동의</span>
+                  </label>
+                  <button type="button" class="btn-toggle"><i class="xi-angle-up-thin"></i></button>
+                </div><!-- //payment-aside-agree-header -->
+                <div class="payment-aside-agree-content color" style="display: block">
+                  <b>제1조 (목적)</b>
+                  <p>이 약관은 주식회사 신세계페이먼츠(이하 '회사'라 합니다)가 제공하는 전자지급결제대행서비스를
+                    이용자가 이용함에 있어 회사와 이용자 사이의 전자금융거래에 관한 기본적인 사항을 정함을 목적으
+                    로 합니다.</p>
+                  <b>제2조 (용어의 정의)</b>
+                  <p>이 약관에서 정하는 용어의 정의는 다음과 같습니다.</p>
+                  <p>1. '전자금융거래'라 함은 회사가 전자적 장치를 통하여 전자지급결제대행서비스 (이하 '전자금융거
+                    래 서비스'라고 합니다)를 제공하고, 이용자가 회사의 종사자와 직접 대면하거나 의사소통을 하지
+                    아니하고 자동화된 방식으로 이를 이용하는 거래를 말합니다.</p>
+                  <p>2. '전자지급결제대행서비스'라 함은 전자적 방법으로 재화의 구입 또는 용역의 이용에 있어서 지급
+                    결제정보를 송신하거나 수신하는 것 또는 그 대가의 정산을 대행하거나 매개하는 서비스를 말합니
+                    다.</p>
+                  <p>3. '이용자'라 함은 이 약관에 동의하고 회사가 제공하는 전자금융거래 서비스를 이용하는 자를 말합
+                    니다.</p>
+                  <p>4. '접근매체'라 함은 전자금융거래에 있어서 거래지시를 하거나 이용자 및 거래내용의 진실성과 정
+                    확성을 확보하기 위하여 사용되는 수단 또는 정보로서 전자식 카드 및 이에 준하는 전자적 정보(신
+                    용카드번호를 포함한다), '전자서명법'상의 인증서, 금융기관 또는 전자금융업자에 등록된 이용자번
+                    호, 이용자의 생체정보, 이상의 수단이나 정보를 사용하는데 필요한 비밀번호 등 전자금융거래법 제
+                    2조 제10호에서 정하고 있는 것을 말합니다.</p>
+                </div><!-- //payment-aside-agree-content -->
+              </div><!-- //payment-aside-agree -->
+              
+              <div class="payment-aside-agree-article">
+                <div class="payment-aside-agree-header xe-form-inline">
+                  <label class="xe-label">
+                    <input type="checkbox">
+                    <span class="xe-input-helper"></span>
+                    <span class="xe-label-text">개인정보 수집 및 이용동의</span>
+                  </label>
+                  <button type="button" class="btn-toggle"><i class="xi-angle-up-thin"></i></button>
+                </div><!-- //payment-aside-agree-header -->
+                <div class="payment-aside-agree-content color" style="display: none">
+                  텍스트 영역
+                </div><!-- //payment-aside-agree-content -->
+              </div><!-- //payment-aside-agree -->
+              
+              <div class="payment-aside-agree-article">
+                <div class="payment-aside-agree-header xe-form-inline">
+                  <label class="xe-label">
+                    <input type="checkbox">
+                    <span class="xe-input-helper"></span>
+                    <span class="xe-label-text">개인정보 제3자 제공/위탁동의</span>
+                  </label>
+                  <button type="button" class="btn-toggle"><i class="xi-angle-up-thin"></i></button>
+                </div><!-- //payment-aside-agree-header -->
+                <div class="payment-aside-agree-content color" style="display: none">
+                  텍스트 영역
+                </div><!-- //payment-aside-agree-content -->
+              </div><!-- //payment-aside-agree -->
+            </div><!-- //payment-aside-agree -->
+          </aside><!-- //payment-aside -->
+        </div><!-- //payment-bottom -->
+      </div><!-- //cart-wrap  -->
+    </div><!-- //container  -->
+  </div><!-- //cart -->
+  
+  @@include('../../include/default_guide.html')
+  @@include('../../include/default_footer.html')
+</div>
+</body>
+</html>

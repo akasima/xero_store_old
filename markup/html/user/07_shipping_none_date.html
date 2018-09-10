@@ -1,0 +1,105 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  @@include('../../include/default_header.html')
+  @@include('../../include/default_logo.html')
+  @@include('../../include/default_menu.html')
+  @@include('../../include/default_search.html')
+
+  <div class="xe-shop shipping">
+    <div class="container">
+      <div class="shipping-wrap">
+
+        <h1 class="page-title">주문/배송조회</h1>
+
+        <section class="shipping-search">
+          <h2 class="xe-sr-only">검색 영역</h2>
+          <div class="shipping-search-btn">
+            <h3 class="xe-sr-only">주 또는 개월 검색 버튼</h3>
+            <div class="xe-btn-group">
+              <button type="button" class="xe-btn">오늘</button>
+              <button type="button" class="xe-btn">1주일</button>
+              <button type="button" class="xe-btn">1개월</button>
+              <button type="button" class="xe-btn">6개월</button>
+            </div>
+          </div><!-- //shipping-search-btn -->
+
+          <div class="shipping-search-term">
+            <h3 class="xe-sr-only">일자 검색</h3>
+            <div class="shipping-search-term-inner">
+              <div class="xe-input-group">
+                <input type="text" class="xe-form-control" placeholder="0000-00-00">
+                <span class="xe-input-group-btn">
+                  <button class="xe-btn " type="button"><span class="xe-sr-only">검색 시작일</span><i class="xi-calendar"></i></button>
+                </span>
+              </div>
+            </div>
+            <span class="shipping-search-term-between">~</span>
+            <div class="shipping-search-term-inner">
+              <div class="xe-input-group">
+                <input type="text" class="xe-form-control" placeholder="0000-00-00">
+                <span class="xe-input-group-btn">
+                  <button class="xe-btn " type="button"><span class="xe-sr-only">검색 종료일</span><i class="xi-calendar"></i></button>
+                </span>
+              </div>
+            </div>
+          </div><!-- //shipping-search-term -->
+
+          <div class="shipping-search-status">
+            <h3 class="xe-sr-only">상태별 검색 </h3>
+            <div class="xe-select-box xe-btn">
+              <label>전체상태</label>
+              <select>
+                <option></option>
+              </select>
+            </div>
+            <button class="xe-btn shipping-search-confirm">조회</button>
+          </div> <!-- //shipping-search-status -->
+        </section><!-- //shipping-search -->
+      </div><!-- //shipping-wrap -->
+    </div><!-- //container  -->
+  </div><!-- //shipping -->
+  @@include('../../include/default_search_date_none.html')
+  <!-- //none-date -->
+
+  @@include('../../include/default_guide.html')
+  @@include('../../include/default_footer.html')
+</div>
+</body>
+</html>

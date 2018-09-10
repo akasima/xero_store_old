@@ -1,0 +1,123 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-naverpay-name: 'icon-naverpay';
+$icon-naverpay-x: 0px;
+$icon-naverpay-y: 46px;
+$icon-naverpay-offset-x: 0px;
+$icon-naverpay-offset-y: -46px;
+$icon-naverpay-width: 45px;
+$icon-naverpay-height: 18px;
+$icon-naverpay-total-width: 87px;
+$icon-naverpay-total-height: 94px;
+$icon-naverpay-image: '../../img/shop_sprite.png';
+$icon-naverpay: (0px, 46px, 0px, -46px, 45px, 18px, 87px, 94px, '../../img/shop_sprite.png', 'icon-naverpay', );
+$icon-payco-name: 'icon-payco';
+$icon-payco-x: 0px;
+$icon-payco-y: 0px;
+$icon-payco-offset-x: 0px;
+$icon-payco-offset-y: 0px;
+$icon-payco-width: 51px;
+$icon-payco-height: 11px;
+$icon-payco-total-width: 87px;
+$icon-payco-total-height: 94px;
+$icon-payco-image: '../../img/shop_sprite.png';
+$icon-payco: (0px, 0px, 0px, 0px, 51px, 11px, 87px, 94px, '../../img/shop_sprite.png', 'icon-payco', );
+$icon-paynow-name: 'icon-paynow';
+$icon-paynow-x: 0px;
+$icon-paynow-y: 74px;
+$icon-paynow-offset-x: 0px;
+$icon-paynow-offset-y: -74px;
+$icon-paynow-width: 64px;
+$icon-paynow-height: 20px;
+$icon-paynow-total-width: 87px;
+$icon-paynow-total-height: 94px;
+$icon-paynow-image: '../../img/shop_sprite.png';
+$icon-paynow: (0px, 74px, 0px, -74px, 64px, 20px, 87px, 94px, '../../img/shop_sprite.png', 'icon-paynow', );
+$icon-syruppay-name: 'icon-syruppay';
+$icon-syruppay-x: 0px;
+$icon-syruppay-y: 21px;
+$icon-syruppay-offset-x: 0px;
+$icon-syruppay-offset-y: -21px;
+$icon-syruppay-width: 87px;
+$icon-syruppay-height: 15px;
+$icon-syruppay-total-width: 87px;
+$icon-syruppay-total-height: 94px;
+$icon-syruppay-image: '../../img/shop_sprite.png';
+$icon-syruppay: (0px, 21px, 0px, -21px, 87px, 15px, 87px, 94px, '../../img/shop_sprite.png', 'icon-syruppay', );
+$spritesheet-width: 87px;
+$spritesheet-height: 94px;
+$spritesheet-image: '../../img/shop_sprite.png';
+$spritesheet-sprites: ($icon-naverpay, $icon-payco, $icon-paynow, $icon-syruppay, );
+$spritesheet: (87px, 94px, '../../img/shop_sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

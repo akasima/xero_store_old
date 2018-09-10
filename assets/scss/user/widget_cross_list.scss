@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@import "variables";
+
+.cross-list {
+  font-size: 0;
+  text-align: center;
+  @include xs-md {
+    display: flex;
+    flex-direction: column;
+  }//sm-over
+  @include sm-over {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include md-over {
+    overflow: hidden;
+    white-space: nowrap;
+  }///md-over
+  .large_img, .small_img {
+    position: relative;
+    border-top: $border;
+    border-bottom: $border;
+    vertical-align: top;
+    margin-bottom: 9px;
+    box-sizing: content-box;
+    @include xs-md {
+      flex: 1;
+    }//sm
+    
+    @include sm-over {
+      display: inline-block;
+      max-width: 367px;
+      border-left: $border;
+      border-right: $border;
+    }//sm-over;
+    
+    @include md-over {
+      overflow: hidden;
+      display: inline-block;
+      margin-bottom: 0;
+    }///md-over
+  }
+  .large_img:nth-of-type(1) {
+    @include xs-md {
+      -webkit-order: 1;
+      order: 1;
+    }//sm
+  }
+  .large_img:nth-of-type(3) {
+    @include xs-md {
+      -webkit-order: 2;
+      order: 2;
+    }//sm
+  }
+  .small_box {
+    @include xs-md {
+      width: 100%;
+      -webkit-order: 3;
+      order: 3;
+      justify-content: space-around;
+    }//sm
+    @include sm-md {
+      display: flex;
+    }
+    @include md-over {
+      display: inline-block;
+      margin: 0 15px;
+    }///md-over
+    
+  }
+  .small_img {
+    @include md-over {
+      display: block;
+      &:first-child {
+        margin-bottom: 12px;
+      }
+    }///md-over
+    
+  }
+  
+  .inner_box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 19px;
+    background-color: rgba(255, 255, 255, 0.8);
+    @include md-over {
+      transform: translateY(100%);
+      transition: transform .23s ease-in;
+      @at-root .cross-list .small_img:hover .inner_box, .cross-list .large_img:hover .inner_box, {
+        transform: translateY(0);
+      }
+    }///md-over
+    strong {
+      font-size: 16px;
+      color: $black-color;
+      text-align: center;
+    }
+    p {
+      margin: 8px 0 14px;
+      padding: 0 9px;
+      font-size: 16px;
+      color: $default-color;
+      line-height: 20px;
+    }
+  }
+  
+  img{
+    vertical-align: top;
+    @include sm {
+      width: 100%;
+      height: auto;
+    }//xs-md
+  }
+}

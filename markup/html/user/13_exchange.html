@@ -1,0 +1,166 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+    
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+    
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  @@include('../../include/default_header.html')
+  @@include('../../include/default_logo.html')
+  @@include('../../include/default_menu.html')
+  @@include('../../include/default_search.html')
+  @@include('../../include/default_step_ui.html', {
+    "step_class": "step-1",
+    "step_title": "교환 단계",
+    "step_contents": ["교환요청", "수거정보<br> 입력", "교환비용 <br>결제", "교환요청 <br>완료"]
+  })
+  
+  <div class="xe-shop status">
+    <div class="container">
+      <div class="status-wrap">
+        
+        <h1 class="page-title">교환요청 상품 선택</h1>
+        <p class="page-title-caption">교환 요청을 하시기 전에 반드시 판매자와 교환 수거 및 교환비용 결제방식을 먼저 협의해주세요.</p>
+        
+        <div class="table-wrap">
+          <h2 class="xe-sr-only">반품상품 정보</h2>
+          <div class="table-type3">
+            <div class="table-header xe-hidden-sm xe-hidden-xs">
+              <div class="table-row">
+                <div class="table-cell cell-date">주문일자</div>
+                <div class="table-cell cell-info">상품정보</div>
+                <div class="table-cell cell-price">결제금액</div>
+                <div class="table-cell cell-num">수량</div>
+                <div class="table-cell cell-shipping">배송비</div>
+              </div>
+            </div> <!-- //table-header -->
+            <div class="table-body">
+              <div class="table-row">
+                <div class="table-cell header cell-date">
+                  <h3 class="order-number xe-hidden-md xe-hidden-lg">주문일자</h3>
+                  <p class="order-number">
+                    <span class="xe-hidden-xs xe-hidden-sm">2017-00-00</span>
+                    <br class="xe-hidden-xs xe-hidden-sm">
+                    <a href="#"><span>(2017000000000000)</span></a>
+                  </p>
+                  <button class="order-number-btn">
+                    <i class="xi-angle-right-thin"></i>
+                  </button>
+                </div>
+                <div class="table-cell">
+                  <div class="table-inner-wrap">
+                    <div class="table-inner-cell cell-info">
+                      
+                      <div class="cell-product-info">
+                        <div class="cell-product-img">
+                          <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+                        </div><!-- //cart-product-img -->
+                        <div class="cell-product-text">
+                          <div class="cell-product-name">
+                            상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+                          </div><!-- //cart-product-name -->
+                          <ul class="cell-product-option">
+                            <li>
+                              <span>컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 </span>
+                            </li>
+                            <li>
+                              <span>컬러 : red / 사이즈 : XL / 2개 </span>
+                            </li>
+                            <li>
+                              <span>컬러 : black / 사이즈 : S / 6개 </span>
+                            </li>
+                          </ul><!-- //cell-product-option -->
+                        </div><!-- //cell-product-text -->
+                      </div>
+                      
+                    </div> <!-- //table-inner-cell -->
+                    <div class="table-inner-cell cell-bottom">
+                      <button type="button" class="btn-toggle xe-hidden-md xe-hidden-lg"><i class="xi-angle-up-thin"></i><span class="xe-sr-only">금액 정보 토글</span></button>
+                      
+                      <!-- [D] 모바일 일때 위 버튼 클릭시 display: none 추가 부탁드립니다. -->
+                      <div class="table-inner-wrap">
+                        <div class="table-inner-cell cell-price">
+                            <span class="cell-title">결제금액</span>
+                          <span class="cell-text">4,400원</span>
+                          
+                        </div><!-- //table-inner-cell -->
+                        <div class="table-inner-cell cell-num">
+                          <span class="cell-title">수량</span>
+                          <span class="cell-text">1개</span>
+                        </div><!-- //table-inner-cell -->
+                        <div class="table-inner-cell cell-shipping">
+                          <span class="cell-title">배송비</span>
+                          <span class="cell-text">2,500원</span>
+                        </div><!-- //table-inner-cell -->
+                      </div><!-- //table-inner-wrap -->
+                    </div><!-- //table-inner-cell -->
+                  </div> <!-- //table-inner-wrap -->
+                  <div class="table-inner-wrap">
+                    <div class="table-inner-cell cell-select">
+                      
+                      <div class="xe-select-box xe-btn">
+                        <label>선택하세요</label>
+                        <select>
+                          <option>1</option>
+                          <option>2</option>
+                        </select>
+                      </div>
+                      <p class="cell-select-caption">교환책임</p>
+                      
+                    </div> <!-- //table-inner-cell -->
+                    <div class="table-inner-cell cell-textarea">
+                      <textarea class="status-textarea"></textarea>
+                    </div><!-- //table-inner-cell -->
+                  </div> <!-- //table-inner-wrap -->
+                </div><!-- //table-cell -->
+              </div> <!-- //table-row -->
+            </div><!-- //table-body -->
+          </div><!-- //table-type3 -->
+        </div><!-- //table-wrap -->
+        
+        <section class="page-btn">
+          <h2 class="xe-sr-only">주문 완료 버튼</h2>
+          <button type="submit" class="page-btn-black">수거정보 입력</button>
+          <button type="submit" class="page-btn-white">이전 페이지</button>
+        </section>
+      </div><!-- //shipping-wrap -->
+    </div><!-- //container  -->
+  </div><!-- //shipping -->
+  
+  @@include('../../include/default_guide.html')
+  @@include('../../include/default_footer.html')
+</div>
+</body>
+</html>

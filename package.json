@@ -1,0 +1,29 @@
+{
+  "name": "rich-shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/akasima/rich-shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/akasima/rich-shop#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-sass": "^3.0.0",
+    "gulp.spritesmith": "^6.5.0"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-file-include": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp.spritesmith": "^6.5.0"
+  },
+  "description": ""
+}

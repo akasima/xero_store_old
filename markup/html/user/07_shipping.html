@@ -1,0 +1,378 @@
+   <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+    
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+    
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+  -->
+  @@include('../../include/default_header.html')
+  @@include('../../include/default_logo.html')
+  @@include('../../include/default_menu.html')
+  @@include('../../include/default_search.html')
+  
+  <div class="xe-shop shipping">
+    <div class="container">
+      <div class="shipping-wrap">
+        
+        <h1 class="page-title">주문/배송조회</h1>
+        
+        <section class="shipping-search">
+          <h2 class="xe-sr-only">검색 영역</h2>
+          <div class="shipping-search-btn">
+            <h3 class="xe-sr-only">주 또는 개월 검색 버튼</h3>
+            <div class="xe-btn-group">
+              <button type="button" class="xe-btn">오늘</button>
+              <button type="button" class="xe-btn">1주일</button>
+              <button type="button" class="xe-btn">1개월</button>
+              <button type="button" class="xe-btn">6개월</button>
+            </div>
+          </div><!-- //shipping-search-btn -->
+          
+          <div class="shipping-search-term">
+            <h3 class="xe-sr-only">일자 검색</h3>
+            <div class="shipping-search-term-inner">
+              <div class="xe-input-group">
+                <input type="text" class="xe-form-control" placeholder="0000-00-00">
+                <span class="xe-input-group-btn">
+                  <button class="xe-btn " type="button"><span class="xe-sr-only">검색 시작일</span><i class="xi-calendar"></i></button>
+                </span>
+              </div>
+            </div>
+            <span class="shipping-search-term-between">~</span>
+            <div class="shipping-search-term-inner">
+              <div class="xe-input-group">
+                <input type="text" class="xe-form-control" placeholder="0000-00-00">
+                <span class="xe-input-group-btn">
+                  <button class="xe-btn " type="button"><span class="xe-sr-only">검색 종료일</span><i class="xi-calendar"></i></button>
+                </span>
+              </div>
+            </div>
+          </div><!-- //shipping-search-term -->
+          
+          <div class="shipping-search-status">
+            <h3 class="xe-sr-only">상태별 검색 </h3>
+            <div class="xe-select-box xe-btn">
+              <label>전체상태</label>
+              <select>
+                <option></option>
+              </select>
+            </div>
+            <button class="xe-btn shipping-search-confirm">조회</button>
+          </div> <!-- //shipping-search-status -->
+          
+        </section><!-- //shipping-search -->
+        <section class="shipping-result">
+          <h2 class="xe-sr-only">조회 결과</h2>
+          
+          <div class="table-wrap">
+            <h2 class="xe-sr-only">주문번호별 상품 내역</h2>
+            <div class="table-type3">
+              <div class="table-header xe-hidden-sm xe-hidden-xs">
+                <div class="table-row">
+                  <div class="table-cell ordernum">주문일자</div>
+                  <div class="table-cell info">상품정보</div>
+                  <div class="table-cell pay">결제금액</div>
+                  <div class="table-cell counter">수량</div>
+                  <div class="table-cell shipping">배송비</div>
+                  <div class="table-cell status">주문상태</div>
+                </div>
+              </div> <!-- //table-header -->
+              <div class="table-body">
+                
+                <!-- [D] 복사 영역 주문별 영역 -->
+                <div class="table-row">
+                  <div class="table-cell header">
+                    <h3 class="order-number xe-hidden-md xe-hidden-lg">주문 번호</h3>
+                    <p class="order-number">
+                      <span class="xe-hidden-xs xe-hidden-sm">2017-00-00</span>
+                      <br class="xe-hidden-xs xe-hidden-sm">
+                      <a href="#"><span>(2017000000000000)</span></a>
+                    </p>
+                    <button class="order-number-btn">
+                      <i class="xi-angle-right-thin"></i>
+                    </button>
+                  </div>
+                  <div class="table-cell">
+                    
+                    <!-- [D] 복사 영역 상품 블럭 -->
+                    <div class="shipping-product">
+                      <div class="cart-product-body">
+                        <div class="cart-product-info">
+                          <div class="cart-product-img">
+                            <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+                          </div><!-- //cart-product-img -->
+                          <div class="cart-product-name">
+                            상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+                          </div><!-- //cart-product-name -->
+                          <div class="cart-product-option">
+                            <ul class="cart-product-option-list">
+                              <li>
+                                <span>컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : red / 사이즈 : XL / 2개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : black / 사이즈 : S / 6개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                            </ul>
+                          </div><!-- //cart-product-option -->
+                        </div><!-- //cart-product-info -->
+                        <div class="cart-product-num">
+                          <div class="cart-product-num-box">
+                            <div class="cart-product-price">
+                              <span class="cart-product-title">결제금액</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-price -->
+                            <div class="cart-product-quantity">
+                              <span class="cart-product-title">수량</span>
+                              <span class="cart-product-text">111개</span>
+                            </div><!-- //cart-product-num -->
+                            <div class="cart-product-shipping">
+                              <span class="cart-product-title">배송비</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-shipping -->
+                            <div class="cart-product-sum">
+                              <span class="cart-product-title">주문 상태</span>
+                              <span class="cart-product-text">입금 확인중</span>
+                              <div class="cart-product-btn">
+                                <button type="button" class="btn-shipping-status">배송조회</button>
+                                <button type="button" class="btn-shipping-status">교환요청</button>
+                              </div><!-- //cart-product-btn -->
+                            </div><!-- //cart-product-sum -->
+                          </div><!-- //cart-product-num-box -->
+                        </div><!-- //cart-product-num -->
+                      </div> <!-- //cart-product-body -->
+                    </div><!-- //shipping-product -->
+                    
+                    <!-- [D] 복사 영역 상품 블럭 -->
+                    <div class="shipping-product">
+                      <div class="cart-product-body">
+                        <div class="cart-product-info">
+                          <div class="cart-product-img">
+                            <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+                          </div><!-- //cart-product-img -->
+                          <div class="cart-product-name">
+                            상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+                          </div><!-- //cart-product-name -->
+                          <div class="cart-product-option">
+                            <ul class="cart-product-option-list">
+                              <li>
+                                <span>컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : red / 사이즈 : XL / 2개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : black / 사이즈 : S / 6개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                            </ul>
+                          </div><!-- //cart-product-option -->
+                        </div><!-- //cart-product-info -->
+                        <div class="cart-product-num">
+                          <div class="cart-product-num-box">
+                            <div class="cart-product-price">
+                              <span class="cart-product-title">결제금액</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-price -->
+                            <div class="cart-product-quantity">
+                              <span class="cart-product-title">수량</span>
+                              <span class="cart-product-text">111개</span>
+                            </div><!-- //cart-product-num -->
+                            <div class="cart-product-shipping">
+                              <span class="cart-product-title">배송비</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-shipping -->
+                            <div class="cart-product-sum">
+                              <span class="cart-product-title">주문 상태</span>
+                              <span class="cart-product-text">배송중</span>
+                              <div class="cart-product-btn">
+                                <button type="button" class="btn-shipping-status">배송조회</button>
+                                <button type="button" class="btn-shipping-status">반품요청</button>
+                                <button type="button" class="btn-shipping-status">교환요청</button>
+                              </div><!-- //cart-product-btn -->
+                            </div><!-- //cart-product-sum -->
+                          </div><!-- //cart-product-num-box -->
+                        </div><!-- //cart-product-num -->
+                      </div> <!-- //cart-product-body -->
+                    </div><!-- //shipping-product -->
+                    
+                  </div>
+                </div> <!-- //table-row -->
+                
+                <!-- [D] 복사 영역 주문별 영역 -->
+                <div class="table-row">
+                  <div class="table-cell header">
+                    <h3 class="order-number xe-hidden-md xe-hidden-lg">주문 번호</h3>
+                    <p class="order-number">
+                      <span class="xe-hidden-xs xe-hidden-sm">2017-00-00</span>
+                      <br class="xe-hidden-xs xe-hidden-sm">
+                      <a href="#"><span>(2017000000000000)</span></a>
+                    </p>
+                    <button class="order-number-btn">
+                      <i class="xi-angle-right-thin"></i>
+                    </button>
+                  </div>
+                  <div class="table-cell">
+                    
+                    <!-- [D] 복사 영역 상품 블럭 -->
+                    <div class="shipping-product">
+                      <div class="cart-product-body">
+                        <div class="cart-product-info">
+                          <div class="cart-product-img">
+                            <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+                          </div><!-- //cart-product-img -->
+                          <div class="cart-product-name">
+                            상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+                          </div><!-- //cart-product-name -->
+                          <div class="cart-product-option">
+                            <ul class="cart-product-option-list">
+                              <li>
+                                <span>컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : red / 사이즈 : XL / 2개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : black / 사이즈 : S / 6개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                            </ul>
+                          </div><!-- //cart-product-option -->
+                        </div><!-- //cart-product-info -->
+                        <div class="cart-product-num">
+                          <div class="cart-product-num-box">
+                            <div class="cart-product-price">
+                              <span class="cart-product-title">결제금액</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-price -->
+                            <div class="cart-product-quantity">
+                              <span class="cart-product-title">수량</span>
+                              <span class="cart-product-text">111개</span>
+                            </div><!-- //cart-product-num -->
+                            <div class="cart-product-shipping">
+                              <span class="cart-product-title">배송비</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-shipping -->
+                            <div class="cart-product-sum">
+                              <span class="cart-product-title">주문 상태</span>
+                              <span class="cart-product-text">반품완료</span>
+                              <div class="cart-product-btn">
+                                <button type="button" class="btn-shipping-status">반송조회</button>
+                                <button type="button" class="btn-shipping-status">반품상세</button>
+                              </div><!-- //cart-product-btn -->
+                            </div><!-- //cart-product-sum -->
+                          </div><!-- //cart-product-num-box -->
+                        </div><!-- //cart-product-num -->
+                      </div> <!-- //cart-product-body -->
+                    </div><!-- //shipping-product -->
+                    
+                    <!-- [D] 복사 영역 상품 블럭 -->
+                    <div class="shipping-product">
+                      <div class="cart-product-body">
+                        <div class="cart-product-info">
+                          <div class="cart-product-img">
+                            <img src="../../../assets/img/tmp_cart.jpg" alt="상품이미지">
+                          </div><!-- //cart-product-img -->
+                          <div class="cart-product-name">
+                            상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12 상품명 상품명 상품명 상풍명 상품명 상품명 상품명 product product 12
+                          </div><!-- //cart-product-name -->
+                          <div class="cart-product-option">
+                            <ul class="cart-product-option-list">
+                              <li>
+                                <span>컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 컬러 : blue / 사이즈 : M / 1개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : red / 사이즈 : XL / 2개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                              <li>
+                                <span>컬러 : black / 사이즈 : S / 6개 </span>
+                                <button type="button" class="btn-option-delet"> <i class="xi-close-thin"></i> <span class="xe-sr-only">해당 옵션 삭제</span> </button>
+                              </li>
+                            </ul>
+                          </div><!-- //cart-product-option -->
+                        </div><!-- //cart-product-info -->
+                        <div class="cart-product-num">
+                          <div class="cart-product-num-box">
+                            <div class="cart-product-price">
+                              <span class="cart-product-title">결제금액</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-price -->
+                            <div class="cart-product-quantity">
+                              <span class="cart-product-title">수량</span>
+                              <span class="cart-product-text">111개</span>
+                            </div><!-- //cart-product-num -->
+                            <div class="cart-product-shipping">
+                              <span class="cart-product-title">배송비</span>
+                              <span class="cart-product-text">111,111,111원</span>
+                            </div><!-- //cart-product-shipping -->
+                            <div class="cart-product-sum">
+                              <span class="cart-product-title">주문 상태</span>
+                              <span class="cart-product-text">배송완료</span>
+                              <div class="cart-product-btn">
+                                <button type="button" class="btn-shipping-status">배송조회</button>
+                                <button type="button" class="btn-shipping-status">반품/교환</button>
+                              </div><!-- //cart-product-btn -->
+                            </div><!-- //cart-product-sum -->
+                          </div><!-- //cart-product-num-box -->
+                        </div><!-- //cart-product-num -->
+                      </div> <!-- //cart-product-body -->
+                    </div><!-- //shipping-product -->
+                    
+                  </div>
+                </div> <!-- //table-row -->
+              </div><!-- //table-body -->
+            </div><!-- //table-type3 -->
+          </div> <!-- //table-wrap -->
+        </section>
+      </div><!-- //shipping-wrap -->
+    </div><!-- //container  -->
+  </div><!-- //shipping -->
+  
+  @@include('../../include/default_guide.html')
+  @@include('../../include/default_footer.html')
+</div>
+</body>
+</html>

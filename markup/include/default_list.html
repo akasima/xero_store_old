@@ -1,0 +1,77 @@
+<section class="xe-shop list">
+  <div class="container">
+    @@if (title_option === true){
+      <h2 class="xe-shop-wiget-title">NEW</h2>
+    }
+    @@if (tab_option === true) {
+    <div class="default-list-tab">
+      <ul>
+        <li><a href="#">2depth</a></li>
+        <li><a href="#">2depth</a></li>
+        <li><a href="#">2depth</a></li>
+        <li><a href="#">2depth</a></li>
+        <li><a href="#">2depth</a></li>
+        <li><a href="#">2depth</a></li>
+        <li><a href="#">2depth</a></li>
+      </ul>
+    </div>
+    }
+    <div class="search-results">
+      <p class="search-results-text"><span class="search-results-text-num">6</span>개의 상품이 검색 되었습니다.</p>
+    </div>
+
+    <div class="range-box">
+      @@if (research_option === true) {
+      <div class="research-box">
+        <input type="text" class="xe-form-control" placeholder>
+        <button type="button">
+          <i class="xi-search"></i><span class="xe-sr-only">검색</span>
+        </button>
+      </div>
+      }
+      @@if (dropbox_option === true) {
+      <div class="xe-dropdown">
+        <button class="xe-btn" type="button" data-toggle="xe-dropdown">Low Price</button>
+        <ul class="xe-dropdown-menu">
+          <li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>
+        </ul>
+      </div>
+      <script>
+        $('.xe-dropdown .xe-btn, .xe-dropdown-menu a').on('click', function () {
+          $('.xe-dropdown').toggleClass('open');
+        });
+      </script>
+    </div>
+    }
+    <ul class="default-list">
+      @@for(var i = 0; i < 15; i++) {
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

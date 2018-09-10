@@ -1,0 +1,18 @@
+
+<!-- [D] 진행 하는 스텝에 따라 아래 클래스명 추가 부탁드립니다.
+  step-1  부터 시작
+ -->
+ <h2 class="xe-sr-only">@@step_title</h2>
+ 
+<div class="step-ui @@step_class">
+  <ul>
+    @@for ( var i = 0; i < step_contents.length; i++) {
+      <li>
+        <p>
+          <span class="xe-hidden-sm xe-hidden-xs">0`+[i+1]+` </span>`+step_contents[i]+` <span class="xe-sr-only">활성화 단계</span>
+        </p>
+        <div class="tail"></div>
+      </li>
+    }
+  </ul>
+</div><!-- //cart-step -->

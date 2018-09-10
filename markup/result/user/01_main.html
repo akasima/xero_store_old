@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>XpressEngine - shop</title>
+
+    <!-- core -->
+    <link href="../../../../../assets/core/common/css/xe-common.css" rel="stylesheet" media="all">
+    <link href="../../../../../assets/core/xe-ui-component/xe-ui-component.css" rel="stylesheet" media="all">
+    <link href="http://cdn.jsdelivr.net/xeicon/2.2.0/xeicon.min.css" rel="stylesheet" media="all">
+    <script>var xeBaseURL = '../../../';</script>
+    <script src="../../../../../assets/core/common/js/dynamicLoadManager.js"></script>
+    <script src="../../../../../assets/jspm_packages/system.js"></script>
+    <script src="../../../../../assets/systemjs.config.js"></script>
+    <script src="../../../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../../../assets/core/common/js/xe.bundle.js"></script>
+
+    <!-- additional -->
+    <link rel="stylesheet" href="../../../assets/css/user/layout.css">
+    <script src="../../../assets/js/markup.js"></script>
+    <script src="../../../assets/js/widgets/slider.js"></script>
+
+    <!-- widget -->
+    <link rel="stylesheet" href="../../../assets/css/user/widget_tab_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_cross_list.css">
+    <link rel="stylesheet" href="../../../assets/css/user/widget_slider.css">
+
+</head>
+<body>
+<div class="xe-shop">
+  <h1 class="xe-sr-only">xe 쇼핑</h1>
+  <!-- 기본 ui
+    scss/user/_skin.scss
+    include/default_header.html
+    include/default_logo.html
+    include/default_menu.html
+    include/default_search.html
+    include/default_slider.html
+  -->
+  <section class="header">
+  <!-- [D] width를 제어하기 위해 사용하는 클래스입니다. 100% 넓이를 사용하는 위젯은 사용할 필요가 없습니다. -->
+  <div class="container">
+    <h2 class="xe-sr-only">상단 유틸</h2>
+    <article class="xe-shop-notice xe-hidden-xs xe-hidden-sm">
+      <h3>notice</h3>
+      <div class="notice-view">
+        <ul>
+          <li><a href="#">1.테스트 베이스 입니다 테스트 베이스 입니다 </a></li>
+          <li><a href="#">2.공지사항입니다.></a></li>
+          <li><a href="#">3.테스트 베이스 입니다 테스트 베이스 입니다 테스트 베이스 입니다 </a></li>
+          <li><a href="#">4.테스트 베이스 입니다 테스트 베이스 입니다 테스트 베이스 입니다 </a></li>
+        </ul>
+      </div>
+    </article>
+    <article class="xe-shop-utilmenu xe-hidden-xs xe-hidden-sm">
+      <h2 class="xe-sr-only">관련 링크</h2>
+      <ul class="xe-shop-utilmenu-list">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">장바구니</a></li>
+        <li><a href="#">주문조회</a></li>
+        <li><a href="#">마이페이지</a></li>
+      </ul>
+      <h2 class="xe-sr-only">검색</h2>
+      <div class="xe-shop-search-input">
+        <input type="text" class="xe-form-control" placeholder="">
+        <button type="button"><i class="xi-search"></i><span class="xe-sr-only">검색</span></button>
+      </div>
+    </article>
+  </div>
+</section>
+  <section class="logo">
+  <div class="container">
+    <h2 class="xe-shop-logo">
+      <a href="#"><img src="../../../assets/img/shop-logo@lg.png" alt="쇼핑몰 로고"></a>
+    </h2>
+    <button type="button" class="xe-shop-btn-search xe-hidden-md xe-hidden-lg"><i class="xi-search"></i><span class="xe-sr-only">검색</span></button>
+  </div>
+</section>
+  <section class="menu">
+  <div class="container">
+    <h2 class="xe-sr-only">메뉴</h2>
+    <ul class="xe-shop-menu">
+      <li><a href="#">CATEGORY 1</a>
+        <ul>
+          <li><a href="#">1 depth depth depth depth depth depth depth depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+          <li><a href="#">1 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 2</a>
+        <ul>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+          <li><a href="#">2 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 3</a>
+        <ul>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+          <li><a href="#">3 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 4</a>
+        <ul>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+          <li><a href="#">4 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 5</a>
+        <ul>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+          <li><a href="#">5 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 6</a>
+        <ul>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+          <li><a href="#">6 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 7</a>
+        <ul>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+          <li><a href="#">7 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 8</a>
+        <ul>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+          <li><a href="#">8 depth</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CATEGORY 9</a>
+        <ul>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+          <li><a href="#">9 depth</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h2 class="xe-sr-only">카테고리</h2>
+    <button type="button" class="xe-btn-category"><i class="xi-bars"></i><span class="xe-sr-only">전체 카테고리 열기</span></button>
+    <!-- [D] 활성화 시 active 클래스 추가 부탁드립니다-->
+    <div class="xe-shop-category ">
+      <div class="xe-shop-login-box xe-hidden-lg xe-hidden-md">
+        <button class="xe-btn xe-btn-login">로그인</button>
+        <button class="xe-btn-close"><span class="xe-sr-only">전체 메뉴 닫기</span><i class="xi-close-thin"></i></button>
+      </div>
+      <div class="xe-shop-btn-box xe-hidden-lg xe-hidden-md">
+        <div>
+          <a href="#">장바구니</a>
+          <a href="#">주문조회</a>
+        </div>
+        <div>
+          <a href="#">마이페이지</a>
+          <a href="#">공지사항</a>
+        </div>
+      </div>
+      <h3 class="xe-shop-category-caption xe-hidden-md xe-hidden-lg">CATEGORY</h3>
+      <div class="xe-shop-category-wrap">
+        <ul class="xe-shop-category-list">
+        <!-- [D] 열림시 open 클래스 추가 -->
+        <li class="open">
+          <h4 class="xe-shop-category-title"><a href="#">category 1</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 2category 2category 2category 2category 2category 2category 2category 2category 2category 2category 2category 2</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 3</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 4</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 5</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 6</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 7</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 8</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4 class="xe-shop-category-title"><a href="#">category 9</a><i class="xi-angle-down-thin"></i></h4>
+          <ul>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+            <li><a href="#">2depth</a></li>
+          </ul>
+        </li>
+      </ul>
+        
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="search">
+  <div class="container">
+    <h2 class="xe-sr-only">검색</h2>
+    <!-- [D] 활성화 시 active 클래스 추가 부탁드립니다-->
+    <div class="xe-shop-search">
+        <div class="search-box">
+          <div class="search-box-border">
+            <input type="search" class="search-box-input">
+            <button class="btn-search"><span class="xe-sr-only">검색하기</span><i class="xi-search"></i></button>
+          </div>
+        </div><!-- //search-box  -->
+        <div class="list-box">
+          <div class="search-keyword">
+            <div class="search-keyword-btn">
+              <!--[D] 활성화시 active 클래스 추가 부탁드립니다.  -->
+              <button type="button" class="active">최근 검색어</button>
+              <button type="button">인기 검색어</button>
+            </div>
+            <div class="search-keyword-list">
+              <!-- [D] 최근 검색어 리스트 display: none/block 하셔도 됩니다  -->
+              <ul>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+                <li><a href="#">dddddddddddddddddddddddddddddddddddddddddd</a></li>
+              </ul>
+            </div>
+            <div class="search-close">
+              <button class="xi-user-plus"></button>
+              <button type="button" class="btn-search-close">닫기</button>
+            </div>
+          </div>
+          <div class="search-preview">
+            <div class="search-preview-list">
+              <ul>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+              <li><a href="#">aa<b>aaa</b></a></li>
+            </ul>
+              
+            </div>
+            <div class="search-close">
+              <button type="button" class="btn-search-close">닫기</button>
+            </div>
+          </div>
+        </div><!-- //list-box  -->
+    </div><!-- //xe-shop-search  -->
+  </div>
+</section>
+  <section class="xe-shop slider">
+  <div class="container">
+    <h2 class="xe-sr-only">비주얼 영역</h2>
+    <div class="xe-spot-slider-view">
+      <ul>
+        <li><a href="#"><img src="../../../assets/img/tmp_spot.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../../assets/img/tmp_spot2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../../assets/img/tmp_spot.jpg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="xe-spot-slider-pager">
+      <button class="xe-btn-prev"><i class="xi-angle-left-thin"></i><span class="xe-sr-only">이전 보기</span></button>
+      <button class="xe-btn-next"><i class="xi-angle-right-thin"></i><span class="xe-sr-only">다음 보기</span></button>
+    </div>
+    <ul class="xe-spot-slider-direction">
+      <li class="active"><button></button></li>
+      <li class=""><button></button></li>
+      <li class=""><button></button></li>
+    </ul>
+  </div>
+</section>
+
+  <!-- 위젯
+    includ/widget_tab_list.html
+    scss/user/widget_tab_list.scss
+  -->
+  <div class="xe-shop">
+  <h2 class="xe-shop-wiget-title">BEST</h2>
+  <div class="tab-list">
+    
+      <ul class="tab-list-title">
+      <li><a href="#">ALL</a></li>
+      <li><a href="#">카테고리 CATEGORY 1</a></li>
+      <li class="active"><a href="#">카테고리 CATEGORY 2</a></li>
+      <li><a href="#">카테고리 CATEGORY 3</a></li>
+      <li><a href="#">카테고리 CATEGORY 4</a></li>
+      <li><a href="#">카테고리 CATEGORY 5</a></li>
+    </ul>
+    
+    <div class="tab-list-container">
+      <div class="container">
+        <!-- [D] 노드를 교체 할 경우 또는 display 할 경우 두 상황에 따라 추가 개발 필요 -->
+        <ul class="view1">
+          <li>
+            <a href="#">
+              <div class="tab-list-img">
+                <div class="tab-list-number">1</div>
+                <img src="../../../assets/img/tmp_tablist.jpg" alt="">
+              </div>
+              <div class="tab-list-caption">
+                <h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+                <p class="default-list-text-price">
+                  <span class="xe-sr-only">할인 전</span>
+                  <span class="through">150,000원</span>
+                  <i class="xi-arrow-right"></i>
+                  <span class="xe-sr-only">할인 후</span>
+                  <span>100,000원</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="tab-list-img">
+                <div class="tab-list-number">2</div>
+                <img src="../../../assets/img/tmp_tablist.jpg" alt="">
+              </div>
+              <div class="tab-list-caption">
+                <h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+                <p class="default-list-text-price">
+                  <span class="xe-sr-only">할인 전</span>
+                  <span class="through">150,000원</span>
+                  <i class="xi-arrow-right"></i>
+                  <span class="xe-sr-only">할인 후</span>
+                  <span>100,000원</span>
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="tab-list-img">
+                <div class="tab-list-number">3</div>
+                <img src="../../../assets/img/tmp_tablist.jpg" alt="">
+              </div>
+              <div class="tab-list-caption">
+                <h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+                <p class="default-list-text-price">
+                  <span class="xe-sr-only">할인 전</span>
+                  <span class="through">150,000원</span>
+                  <i class="xi-arrow-right"></i>
+                  <span class="xe-sr-only">할인 후</span>
+                  <span>100,000원</span>
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div><!-- //container  -->
+    </div><!-- //tab-list-container  -->
+  </div><!-- //tab-list -->
+</div><!-- //xe-shop  -->
+
+<script>
+  var tab_list_index = 1;
+  var tab_list = setInterval(function(){
+    if(tab_list_index == 3) {
+      tab_list_index = 1;
+    } else {
+      tab_list_index++;
+    }
+    $('.tab-list-container ul').removeClass().addClass('view'+tab_list_index);
+    
+  }, 3000)
+</script>
+
+  <!-- 위젯
+    includ/widget_cross_list.html
+    scss/user/widget_cross_list.scss
+  -->
+  <div class="xe-shop">
+  <div class="container">
+    <h2 class="xe-shop-wiget-title">EVENT</h2>
+    <div class="cross-list">
+      <div class="large_img">
+        <a href="#"><img src="../../../assets/img/tmp_cross.jpg" alt="">
+          <div class="inner_box">
+            <strong>30% SALE</strong>
+            <p>KNIT 이벤트 내용 KNIT 이벤트 내용 KNIT 이벤 트 내용 KNIT 이벤트 내용 KNIT 이벤트 내용 KNI T 이벤트</p>
+          </div>
+        </a>
+      </div>
+      <div class="small_box">
+        <div class="small_img">
+          <a href="#"><img src="../../../assets/img/tmp_cross2.jpg" alt="">
+            <div class="inner_box">
+              <strong>30% SALE</strong>
+              <p>KNIT 이벤트 내용 KNIT 이벤트 내용 KNIT 이벤 트 내용 KNIT 이벤트 내용 KNIT 이벤트 내용 KNI T 이벤트</p>
+            </div>
+          </a>
+        </div>
+        <div class="small_img">
+          <a href="#"><img src="../../../assets/img/tmp_cross2.jpg" alt="1">
+            <div class="inner_box">
+              <strong>30% SALE</strong>
+              <p>KNIT 이벤트 내용 KNIT 이벤트 내용 KNIT 이벤 트 내용 KNIT 이벤트 내용 KNIT 이벤트 내용 KNI T 이벤트</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="large_img">
+        <a href="#"><img src="../../../assets/img/tmp_cross.jpg" alt="">
+          <div class="inner_box">
+            <strong>30% SALE</strong>
+            <p>KNIT 이벤트 내용 KNIT 이벤트 내용 KNIT 이벤 트 내용 KNIT 이벤트 내용 KNIT 이벤트 내용 KNI T 이벤트</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- 위젯
+    includ/widget_slider.html
+    scss/user/widget_slider.scss
+  -->
+  <div class="xe-shop">
+  <div class="container">
+    <h2 class="xe-shop-wiget-title">MD 추천상품</h2>
+    <div class="xe-shop-slider">
+      <div class="xe-shop-slider-view">
+        <ul>
+          <li class=""><a href="#">
+            <img src="../../../assets/img/tmp_slider.jpg" alt="">
+            <!-- [D] 엔터는 1회 한하여 사용할수 있도록 한다. 한줄에 들어가는 한글 최대 갯수 / 영문  -->
+            <div class="xe-shop-slider-caption">
+              <p class="xe-shop-slider-title">연말선물 끝판왕<br>브랜드 ITEM</p>
+              <p class="xe-shop-slider-comment">MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천MD추천 MD추천 MD추천 MD추천</p>
+            </div>
+          </a></li>
+          <!-- [D] 가운대 위치할 경우 active 클래스 추가 부탁드립니다.  -->
+          <li class="active"><a href="#">
+            <img src="../../../assets/img/tmp_slider.jpg" alt="">
+            <!-- [D] 엔터는 1회 한하여 사용할수 있도록 한다. 한줄에 들어가는 한글 최대 갯수 / 영문  -->
+            <div class="xe-shop-slider-caption">
+              <p class="xe-shop-slider-title">연말선물 끝판왕<br>브랜드 ITEM</p>
+              <p class="xe-shop-slider-comment">MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천MD추천 MD추천 MD추천 MD추천</p>
+            </div>
+          </a></li>
+          <li><a href="#">
+            <img src="../../../assets/img/tmp_slider.jpg" alt="">
+            <!-- [D] 엔터는 1회 한하여 사용할수 있도록 한다. 한줄에 들어가는 한글 최대 갯수 / 영문  -->
+            <div class="xe-shop-slider-caption">
+              <p class="xe-shop-slider-title">연말선물 끝판왕<br>브랜드 ITEM</p>
+              <p class="xe-shop-slider-comment">MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천 MD추천MD추천 MD추천 MD추천 MD추천</p>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+      <button type="button" class="xe-btn xe-btn-slider-prev"><i class="xi-angle-left-thin"></i></button>
+      <button type="button" class="xe-btn xe-btn-slider-next"><i class="xi-angle-right-thin"></i></button>
+    </div>
+  </div>
+</div>
+<script>
+  $('.xe-shop-slider-view').on('resize', function (){
+    console.log('1111');
+  });
+</script>
+
+  <section class="xe-shop list">
+  <div class="container">
+    
+    
+    <div class="search-results">
+      <p class="search-results-text"><span class="search-results-text-num">6</span>개의 상품이 검색 되었습니다.</p>
+    </div>
+
+    <div class="range-box">
+      
+      <div class="research-box">
+        <input type="text" class="xe-form-control" placeholder>
+        <button type="button">
+          <i class="xi-search"></i><span class="xe-sr-only">검색</span>
+        </button>
+      </div>
+      
+      
+      <div class="xe-dropdown">
+        <button class="xe-btn" type="button" data-toggle="xe-dropdown">Low Price</button>
+        <ul class="xe-dropdown-menu">
+          <li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>
+          <li><a href="#">text</a></li>
+        </ul>
+      </div>
+      <script>
+        $('.xe-dropdown .xe-btn, .xe-dropdown-menu a').on('click', function () {
+          $('.xe-dropdown').toggleClass('open');
+        });
+      </script>
+    </div>
+    
+    <ul class="default-list">
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+        <li>
+          <div class="default-list-img">
+            <a href="#"><img src="../../../assets/img/tmp_product.jpg" alt=""></a>
+            <h4 class="xe-sr-only">sns 공유</h4>
+            <ul class="default-list-sns">
+              <!-- [D] a 클릭시 내부에 xi-heart-o 클래스 명을 xi-heart 로 변경 부탁드립니다. -->
+              <li><a href="#"><i class="xi-heart"></i><span class="xe-sr-only">좋아요</span></a></li>
+              <li><a href="#"><i class="xi-facebook"></i><span class="xe-sr-only">페이스북 공유</span></a></li>
+              <li><a href="#"><i class="xi-instagram"></i><span class="xe-sr-only">인스타그램 공유</span></a></li>
+            </ul>
+          </div>
+          <div class="default-list-text">
+            <a href="#"><h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
+              <p class="default-list-text-price">
+                <span class="xe-sr-only">할인 전</span>
+                <span class="through">150,000원</span>
+                <i class="xi-arrow-right"></i>
+                <span class="xe-sr-only">할인 후</span>
+                <span>100,000원</span>
+              </p>
+            </a>
+          </div>
+      </li>
+      
+    </ul>
+  </div>
+</section>
+
+
+   <section class="guide">
+  <div class="container">
+    <h2 class="xe-sr-only">회사 기본정보</h2>
+    <article class="xe-shop-link">
+      <h3 class="xe-sr-only">관련링크</h3>
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">이용안내</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+      </ul>
+    </article>
+    <article class="xe-shop-guide">
+      <h3 class="xe-sr-only">회사 정보</h3>
+      <dl>
+        <dt>CS CENTER</dt>
+        <dd class="xe-shop-guide-bold"><i class="xi-call"></i>02-111-1234</dd>
+        <dd>평일  오전 10:00 ~ 오후 06:00</dd>
+        <dd>점심 오후 12:00 ~ 오후 01:00</dd>
+        <dd>휴무 토/일/공휴일</dd>
+      </dl>
+      <dl>
+        <dt>BANK</dt>
+        <dd>국민은행  12345-678-123123</dd>
+        <dd>국민은행  12345-678-123123</dd>
+        <dd>국민은행  12345-678-123123</dd>
+        <dd>예금주  홍길동</dd>
+      </dl>
+      <dl>
+        <dt>DELIVERY</dt>
+        <dd>반품주소  (12345) 서울특별시 강남구 00길 000빌딩 000호 DAZE</dd>
+        <dd>반품요청  우체국 택배  1588-1300</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+  <footer class="footer">
+  <section class="xe-company-info">
+    <div class="container">
+      <div class="xe-company-info-article">
+        <p>
+          <b>상호명</b>
+          <span>XE SHOP</span>
+        </p>
+        <p>
+          <b>대표자</b>
+          <span>홍길동</span>
+        </p>
+        <p>
+          <b>사업자등록번호</b>
+          <span>123-45-67890<a href="#">[사업자정보확인]</a></span>
+        </p>
+        <p>
+          <b>통신판매업</b>
+          <span>신고 제 2016-서울-0000호</span>
+        </p>
+      </div>
+      <div class="xe-company-info-article">
+        <p>
+          <b>주소</b>
+          <span>(12345) 서울특별시 강남구 00길 000빌딩 000호</span>
+        </p>
+        <p>
+          <b>대표전화</b>
+          <span>02-111-1234</span>
+        </p>
+      </div>
+      <div class="xe-company-info-article">
+        <p>
+          <b>개인정보관리책임자</b>
+          <span>홍길수</span>
+        </p>
+        <p>
+          <b>이메일</b>
+          <span>xeshop@xeshop.com</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="copyright">
+    <div class="container">
+      <p>Copyright &copy; 2016 쇼핑몰 이름 All rights reserved.&nbsp;&nbsp;&nbsp;<br class="xe-hidden-md xe-hidden-lg">MADE BY XE</p>
+    </div>
+  </section>
+</footer>
+
+</div>
+</body>
+</html>
