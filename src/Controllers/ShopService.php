@@ -13,8 +13,6 @@ class ShopService
 {
     public function __construct()
     {
-        \XeTheme::selectTheme('theme/xero_store@theme');
-        \XePresenter::setSkinTargetId(Plugin::getId());
     }
 
     public function getItems(ConfigEntity $config = null)

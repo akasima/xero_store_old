@@ -10,6 +10,7 @@ use Akasima\RichShop\Models\Slug;
 use Akasima\RichShop\Modules\Resources;
 use Akasima\RichShop\Plugin;
 use Akasima\RichShop\Modules\Shop as ShopModule;
+use Akasima\RichShop\Theme\Theme;
 use App\Http\Controllers\Controller;
 use XePresenter;
 use XeFrontend;
@@ -34,6 +35,8 @@ class ModuleController extends Controller
     /** @var  string */
     protected $instanceId;
 
+    protected $theme;
+
     public function __construct()
     {
         $instanceConfig = InstanceConfig::instance();
@@ -50,6 +53,12 @@ class ModuleController extends Controller
         XePresenter::share('config', $config);
 
         \XeTheme::selectTheme('theme/xero_store@theme');
+
+        $theme = Theme::class;
+
+        \XePresenter::share([
+            'theme' => $theme,
+        ]);
     }
 
     /**
