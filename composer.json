@@ -23,52 +23,52 @@
         "xpressengine": {
             "title": "쇼핑몰 플러그인",
             "component": {
-                "module/rich_shop@shop": {
+                "module/xero_store@shop": {
                     "class": "Akasima\\RichShop\\Modules\\Shop",
                     "name": "Shop items",
                     "description": "shop 아이템 목록 출력 모듈"
                 },
-                "module/rich_shop@shop/skin/rich_shop@moduleSkin": {
+                "module/xero_store@shop/skin/xero_store@moduleSkin": {
                     "class": "Akasima\\RichShop\\Skins\\ModuleSkin",
                     "name": "shop 메뉴에서 사용하는 기본 스킨",
                     "description": "The Skin supported by Rich_shop plugin."
                 },
-                "rich_shop/skin/rich_shop@shopSkin": {
+                "xero_store/skin/xero_store@shopSkin": {
                     "class": "Akasima\\RichShop\\Skins\\ShopSkin",
                     "name": "shop 기본 스킨",
                     "description": "The Skin supported by Rich_shop plugin."
                 },
-                "rich_shop/settingsSkin/rich_shop@settingsSkin": {
+                "xero_store/settingsSkin/xero_store@settingsSkin": {
                     "class": "Akasima\\RichShop\\Skins\\SettingsSkin",
                     "name": "shop 관리자 스킨",
                     "description": "The Skin supported by Rich_shop plugin."
                 },
-                "theme/rich_shop@theme": {
+                "theme/xero_store@theme": {
                     "class": "Akasima\\RichShop\\Theme\\Theme",
                     "name": "쇼핑몰 테마",
                     "description": "The Theme supported by Rich_shop plugin."
                 },
-                "widget/rich_shop@cross": {
+                "widget/xero_store@cross": {
                     "class": "Akasima\\RichShop\\Widgets\\CrossWidget",
                     "name": "쇼핑몰 크로스 위젯",
                     "description": ""
                 },
-                "widget/rich_shop@list": {
+                "widget/xero_store@list": {
                     "class": "Akasima\\RichShop\\Widgets\\ListWidget",
                     "name": "쇼핑몰 리스트 위젯",
                     "description": ""
                 },
-                "widget/rich_shop@slider": {
+                "widget/xero_store@slider": {
                     "class": "Akasima\\RichShop\\Widgets\\SliderWidget",
                     "name": "쇼핑몰 슬라이더 위젯",
                     "description": ""
                 },
-                "widget/rich_shop@spotSlider": {
+                "widget/xero_store@spotSlider": {
                     "class": "Akasima\\RichShop\\Widgets\\SpotSliderWidget",
                     "name": "쇼핑몰 스팟 슬라이더 위젯",
                     "description": ""
                 },
-                "widget/rich_shop@tab": {
+                "widget/xero_store@tab": {
                     "class": "Akasima\\RichShop\\Widgets\\TabWidget",
                     "name": "쇼핑몰 탭 위젯",
                     "description": ""

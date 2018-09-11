@@ -1,6 +1,7 @@
 <?php
 namespace Akasima\RichShop\Modules;
 
+use Akasima\RichShop\Theme\Theme;
 use Xpressengine\Category\Models\Category;
 use Xpressengine\Menu\AbstractModule;
 use Akasima\RichShop\Plugin;
@@ -23,9 +24,11 @@ class Shop extends AbstractModule
     {
         $config = XeConfig::get(Plugin::getId());
         $categoryItems = Category::find($config->get('categoryId'))->getProgenitors();
+        $theme = Theme::class;
 
         return View::make(Plugin::getId() . '::views/shopModule/create', [
             'categoryItems' => $categoryItems,
+            'theme' => $theme,
         ])->render();
     }
 

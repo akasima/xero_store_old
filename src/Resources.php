@@ -109,14 +109,13 @@ class Resources
      */
     static public function createCommentInstance()
     {
-        $instanceId = 'rich_shop';
         /** @var \Xpressengine\Plugins\Comment\Handler $commentHandler */
         $commentHandler = app('xe.plugin.comment')->getHandler();
-        $commentHandler->createInstance($instanceId, true);
-        $commentHandler->configure($commentHandler->getInstanceId($instanceId), ['useWysiwyg' => true]);
-        static::createAppraisalScoreField($commentHandler->getInstanceId($instanceId));
+        $commentHandler->createInstance(Plugin::instanceId, true);
+        $commentHandler->configure($commentHandler->getInstanceId(Plugin::instanceId), ['useWysiwyg' => true]);
+        static::createAppraisalScoreField($commentHandler->getInstanceId(Plugin::instanceId));
 
-        $instanceId = 'rich_shop_qna';
+        $instanceId = Plugin::instanceId . '_qna';
         /** @var \Xpressengine\Plugins\Comment\Handler $commentHandler */
         $commentHandler = app('xe.plugin.comment')->getHandler();
         $commentHandler->createInstance($instanceId, true);

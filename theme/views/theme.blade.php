@@ -1,12 +1,8 @@
 {{-- script --}}
-{{ app('xe.frontend')->js([
-    'plugins/rich_shop/assets/js/markup.js'
-])->load() }}
+{{ app('xe.frontend')->js([$theme::asset('/js/markup.js')])->load() }}
 
 {{-- stylesheet --}}
-{{ app('xe.frontend')->css([
-    'plugins/rich_shop/assets/css/user/layout.css',
-])->load() }}
+{{ app('xe.frontend')->css([$theme::asset('/css/user/layout.css')])->load() }}
 
 <h1 class="xe-sr-only">xe 쇼핑</h1>
 <section class="xe-shop header">
@@ -54,7 +50,7 @@
 <section class="xe-shop logo">
     <div class="container">
         <h2 class="xe-shop-logo">
-            <a href="/"><img src="/plugins/rich_shop/assets/img/shop-logo@lg.png" alt="쇼핑몰 로고"></a>
+            <a href="/"><img src="/plugins/xero_store/assets/img/shop-logo@lg.png" alt="쇼핑몰 로고"></a>
         </h2>
     </div>
 </section>
@@ -135,7 +131,7 @@
     </section>
     <section class="copyright">
         <div class="container">
-            <p>Copyright &copy; 2016 쇼핑몰 이름 All rights reserved.&nbsp;&nbsp;&nbsp;MADE BY XE</p>
+            <p>Copyright &copy; 2018 쇼핑몰 이름 All rights reserved.&nbsp;&nbsp;&nbsp;MADE BY XE</p>
         </div>
     </section>
 </footer>

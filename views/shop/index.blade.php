@@ -10,7 +10,7 @@
                         <a href="#">
                             <div class="tab-list-img">
                                 <div class="tab-list-number">1</div>
-                                <img src="/plugins/rich_shop/assets/img/tmp_tablist.jpg" alt="">
+                                <img src="/plugins/xero_store/assets/img/tmp_tablist.jpg" alt="">
                             </div>
                             <div class="tab-list-caption">
                                 <h3 class="default-list-text-title"><span class="xe-shop-tag black">new</span><span class="xe-shop-tag">best</span> 상품명 PRODUCT 상품명 PRODUCT 상품명 상품명 상품명 상품명 상품명 상품명 상품명 상품명</h3>
@@ -54,7 +54,7 @@
             @foreach($paginate as $item)
                 <li>
                     <div class="default-list-img">
-                        <a href="{{route('rich_shop.product', ['slug' => $item->slug->slug])}}"><img src="{{ $item->getThumbnail('450x600') }}" alt="{{ $item->productName }}"></a>
+                        <a href="{{route('rich_shop.product', ['slug' => $item->slug->slug])}}"><img src="{{ $item->getThumbnail('450x600') }}" alt="{{ $item->product_name }}"></a>
                         <h4 class="xe-sr-only">sns 공유</h4>
                         <ul class="default-list-sns">
                             <li><a href="#"><i class="xi-heart-o"></i></a></li>
@@ -67,7 +67,7 @@
                             <h3 class="default-list-text-title">
                                 {{--<span class="xe-shop-tag black">new</span>--}}
                                 {{--<span class="xe-shop-tag">best</span>--}}
-                                {!! $item->productName !!}
+                                {!! $item->product_name !!}
                             </h3>
                             <p class="default-list-text-price">
                                 <span class="xe-sr-only">할인 전</span>

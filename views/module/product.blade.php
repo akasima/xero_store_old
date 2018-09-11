@@ -1,7 +1,7 @@
 {{XeFrontend::css('/assets/vendor/bootstrap/css/bootstrap.css')->load()}}
 
 {{XeFrontend::js([
-'/plugins/rich_shop/assets/js/shop.js',
+$theme::asset('/assets/js/shop.js'),
 '/assets/vendor/bootstrap/js/bootstrap.min.js',
 ])->load()}}
 

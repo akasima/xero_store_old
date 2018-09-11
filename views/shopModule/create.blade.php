@@ -1,4 +1,4 @@
-{{XeFrontend::js('/plugins/rich_shop/assets/js/settings.js')->load()}}
+{{ XeFrontend::js($theme::asset('js/settings.js'))->load() }}
 
 <div>
     <div class="clearfix">

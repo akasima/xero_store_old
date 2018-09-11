@@ -1,4 +1,4 @@
-{{XeFrontend::js('/plugins/rich_shop/assets/js/shop.js')->load()}}
+{{XeFrontend::js($theme::asset('js/shop.js'))->load()}}
 
 <div class="xe-shop category-item-wrap">
     <div class="container">
@@ -127,7 +127,7 @@
                                         <select class="xe-select-option">
                                             <option disabled="">선택</option>
                                             @foreach ($product->options as $option)
-                                                <option value="{{$option->id}}" data-id="{{$option->id}}" data-price="{{$product->price + $option->additionalPrice}}">{{$option->optionName}}</option>
+                                                <option value="{{$option->id}}" data-id="{{$option->id}}" data-price="{{$product->price + $option->additional_price}}">{{$option->option_name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -138,17 +138,17 @@
                     <div class="selected product-info-container">
                         @if (count($product->options) == 1)
                             <div class="product-info-low xe-border-top xe-border-bottom counter">
-                                <div class="product-info-cell">{{$product->options[0]->optionName}}</div>
+                                <div class="product-info-cell">{{$product->options[0]->option_name}}</div>
                                 <div class="product-info-cell">
                                     <input type="hidden" name="orderOptionId[]" value="{{$product->options[0]->id}}" />
                                     <input type="hidden" name="orderQuantity[]" value="1" />
-                                    <input type="hidden" name="orderPrice[]" value="{{$product->price + $product->options[0]->additionalPrice}}" />
+                                    <input type="hidden" name="orderPrice[]" value="{{$product->price + $product->options[0]->additional_price}}" />
                                     <div class="xe-spin-box">
                                         <button type="button" class="decrease"><i class="xi-minus-thin"></i><span class="xe-sr-only">감소</span></button>
                                         <p class="orderQuantity">1</p>
                                         <button type="button" class="increase"><i class="xi-plus-thin"></i><span class="xe-sr-only">증가</span></button>
                                     </div>
-                                    <p><span class="price" data-price="{{$product->price + $product->options[0]->additionalPrice}}">{{$product->price + $product->options[0]->additionalPrice}}</span>원</p>
+                                    <p><span class="price" data-price="{{$product->price + $product->options[0]->additional_price}}">{{$product->price + $product->options[0]->additional_price}}</span>원</p>
                                     <button type="button" class="xe-btn xe-btn-remove"><i class="xi-close-thin"></i><span class="xe-sr-only">이 옵션 삭제</span></button>
                                 </div>
                             </div>

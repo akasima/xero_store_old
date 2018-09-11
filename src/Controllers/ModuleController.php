@@ -48,6 +48,8 @@ class ModuleController extends Controller
 
         XePresenter::setSkinTargetId(ShopModule::getId());
         XePresenter::share('config', $config);
+
+        \XeTheme::selectTheme('theme/xero_store@theme');
     }
 
     /**

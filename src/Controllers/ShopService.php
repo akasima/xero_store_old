@@ -1,9 +1,9 @@
 <?php
 namespace Akasima\RichShop\Controllers;
 
+use Akasima\RichShop\Plugin;
 use Akasima\RichShop\QnaCommentUsable;
 use Xpressengine\Config\ConfigEntity;
-
 use Akasima\RichShop\Models\Product;
 use Akasima\RichShop\Models\ProductCategory;
 use Akasima\RichShop\Models\Slug;
@@ -13,6 +13,8 @@ class ShopService
 {
     public function __construct()
     {
+        \XeTheme::selectTheme('theme/xero_store@theme');
+        \XePresenter::setSkinTargetId(Plugin::getId());
     }
 
     public function getItems(ConfigEntity $config = null)

@@ -3,6 +3,7 @@ namespace Akasima\RichShop;
 
 use Akasima\RichShop\FieldTypes\Appraisal;
 use Akasima\RichShop\FieldTypes\FieldSkins\AppraisalDefaultSkin;
+use Akasima\RichShop\Theme\Theme;
 use XeFrontend;
 use XePresenter;
 use Xpressengine\Http\Request;
@@ -11,6 +12,8 @@ use XeConfig;
 
 class Plugin extends AbstractPlugin
 {
+    const instanceId = 'xero_store';
+
     /**
      * 이 메소드는 활성화(activate) 된 플러그인이 부트될 때 항상 실행됩니다.
      *

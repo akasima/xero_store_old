@@ -7,6 +7,7 @@ use Akasima\RichShop\Models\ProductCategory;
 use Akasima\RichShop\Models\Seller;
 use Akasima\RichShop\Plugin;
 use Akasima\RichShop\Modules\Shop as ShopModule;
+use Akasima\RichShop\Theme\Theme;
 use App\Http\Controllers\Controller;
 use Xpressengine\Database\Eloquent\Builder;
 use Illuminate\Http\Response;
@@ -33,6 +34,12 @@ class SettingsController extends Controller
     public function __construct()
     {
         XePresenter::setSettingsSkinTargetId(Plugin::getId());
+
+        $theme = Theme::class;
+
+        \XePresenter::share([
+            'theme' => $theme,
+        ]);
     }
 
     public function shopInfo()

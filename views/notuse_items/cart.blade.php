@@ -1,4 +1,4 @@
-{{XeFrontend::js('/plugins/rich_shop/assets/js/shop.js')->load()}}
+{{XeFrontend::js($theme::asset('assets/js/shop.js'))->load()}}
 
 <div class="shop-container">
     <form method="get" action="{{route('rich_shop.order')}}">
@@ -14,9 +14,9 @@
                                 @foreach ($cart->cartOptions as $cartOption)
                                     <ul>
                                         <li class="option-box option-{{$cartOption->optionId}}" data-url-update-quantity="{{route('rich_shop.cart.quantity.update', ['id' => $cartOption->id])}}">
-                                            <input type="checkbox" class="option-select" name="id[]" value="{{$cartOption->id}}" checked="checked" data-amount="{{($cart->product->price + $cartOption->option->additinalPrice) * $cartOption->quantity}}" data-delivery-fee="0"/>
-                                            {{$cartOption->option->optionName}} /
-                                            <span class="price">{{$cart->product->price + $cartOption->option->additinalPrice}}</span> 원 x
+                                            <input type="checkbox" class="option-select" name="id[]" value="{{$cartOption->id}}" checked="checked" data-amount="{{($cart->product->price + $cartOption->option->additional_price) * $cartOption->quantity}}" data-delivery-fee="0"/>
+                                            {{$cartOption->option->option_name}} /
+                                            <span class="price">{{$cart->product->price + $cartOption->option->additional_price}}</span> 원 x
 
                                             <button type="button" class="decrease"><i class="xi-minus-thin"></i><span class="xe-sr-only">감소</span></button>
                                             <span class="quantity">{{$cartOption->quantity}}</span> 개
@@ -24,7 +24,7 @@
 
                                             =
 
-                                            <span class="amount">{{($cart->product->price + $cartOption->option->additinalPrice) * $cartOption->quantity}}</span> 원
+                                            <span class="amount">{{($cart->product->price + $cartOption->option->additinal_price) * $cartOption->quantity}}</span> 원
                                         </li>
                                     </ul>
                                 @endforeach

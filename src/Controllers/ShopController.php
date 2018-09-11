@@ -24,7 +24,7 @@ class ShopController extends Controller
 {
     public function __construct()
     {
-        XeTheme::selectTheme('theme/rich_shop@theme');
+        XeTheme::selectTheme('theme/xero_store@theme');
         XePresenter::setSkinTargetId(Plugin::getId());
     }
 

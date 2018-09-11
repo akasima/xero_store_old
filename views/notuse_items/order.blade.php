@@ -1,4 +1,4 @@
-{{XeFrontend::js('/plugins/rich_shop/assets/js/shop.js')->load()}}
+{{XeFrontend::js($theme::asset('js/shop.js'))->load()}}
 
 <script src="//dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
@@ -73,20 +73,20 @@
                                         @if(in_array($cartOption->id, $cartOptionIds) === false)
                                             <!-- 카트에서 구매 안하는 항목들 -->
                                             <li class="option-box" style="background-color:red;">
-                                                {{$cartOption->option->optionName}} /
-                                                <span class="price">{{$cart->product->price + $cartOption->option->additinalPrice}}</span> 원 x
+                                                {{$cartOption->option->option_name}} /
+                                                <span class="price">{{$cart->product->price + $cartOption->option->additional_price}}</span> 원 x
                                                 <span class="quantity">{{$cartOption->quantity}}</span> 개
                                                 =
-                                                <span class="amount">{{($cart->product->price + $cartOption->option->additinalPrice) * $cartOption->quantity}}</span> 원
+                                                <span class="amount">{{($cart->product->price + $cartOption->option->additional_price) * $cartOption->quantity}}</span> 원
                                             </li>
                                         @else
                                             <li class="option-box">
                                                 <input type="hidden" name="cartOptionId[]" value="{{$cartOption->id}}" />
-                                                {{$cartOption->option->optionName}} /
-                                                <span class="price">{{$cart->product->price + $cartOption->option->additinalPrice}}</span> 원 x
+                                                {{$cartOption->option->option_name}} /
+                                                <span class="price">{{$cart->product->price + $cartOption->option->additinal_price}}</span> 원 x
                                                 <span class="quantity">{{$cartOption->quantity}}</span> 개
                                                 =
-                                                <span class="amount">{{($cart->product->price + $cartOption->option->additinalPrice) * $cartOption->quantity}}</span> 원
+                                                <span class="amount">{{($cart->product->price + $cartOption->option->additinal_price) * $cartOption->quantity}}</span> 원
                                             </li>
                                         @endif
                                         </li>
